@@ -1,0 +1,13 @@
+
+funcao classifica_triangulo(a,b,c):
+    se a**2 + b**2 == c**2:
+        retorna "Triangulo Retângulo"
+    se a**2 + c**2 == b**2 ou b**2 + c**2 = a**2:
+        retorna "Triangulo Obtusângulo"
+    senao:
+        retorna "Triangulo Acutângulo"
+
+entrada("Digite o comprimento do primeiro lado do triângulo: ", a) 
+entrada("Digite o comprimento do segundo lado do triângulo: ", b) 
+entrada("Digite o comprimento do terceiro lado do triângulo: ", c) 
+imprime(classifica_triangulo(a,b,c))

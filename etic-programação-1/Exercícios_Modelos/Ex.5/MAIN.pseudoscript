@@ -1,0 +1,43 @@
+Simple Text Editor: Desenvolva um editor de texto simples que permita ao usuário criar,
+editar e salvar arquivos de texto.
+
+cardapio = ()
+modelo Text_editor()
+    funcao menu(escolha):
+        se escolha == "1":
+            entrada("Digite aqui o texto que deseja salvar:\n", texto)
+            cardapio[tamanho(cardapio) + 1] = texto
+        se escolha == "2":
+            print(cardapio)
+            entrada("Qual o número do texto que deseja editar?", chave)
+            entrada("Digite abaixo o texto editado:\n", texto_editado)
+            cardapio[chave] = texto_editado
+        se escolha == "3"
+            novo_cardapio = ()
+            print(cardapio)
+            entrada("Qual o número do texto que deseja eliminar?", chavee)
+            cada chave, texto em cardapio:
+                se chave != chavee:
+                    novo_cardapio[chave] = texto
+                cardapio = novo_cardapio
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+entrada("Bem vindo ao editor de texto, pressione 1 para criar um novo texto\nPressione 2 para editar um texto\nPressione 3 para eliminar algum texto", escolha)
+
+programa_texto = Text_editor
+Text_editor.menu(escolha)
+
+
+

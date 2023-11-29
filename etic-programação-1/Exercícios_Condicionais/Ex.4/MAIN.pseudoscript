@@ -1,0 +1,11 @@
+
+funcao numero_maior(numero_1, numero_2):
+    se numero_1 > numero_2:
+        imprime(numero_1)
+    senao:
+        imprime(numero_2)
+
+entrada("Diga o primeiro número: ", a)
+entrada("Diga o segundo número: ", b)
+
+imprime("O numero maior é {numero_maior(a, b}")

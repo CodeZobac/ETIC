@@ -1,0 +1,10 @@
+modelo valor_transporte:
+    funcao valor(km)
+        preco = km * 1.5
+        imprime(preco)
+
+entrada("Qual foi o total de KM andados? ", km)
+
+imprime("O preço total é: {valor_transporte.valor(km)}")
+
+        

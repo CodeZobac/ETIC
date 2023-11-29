@@ -1,0 +1,13 @@
+
+
+funcao desconto(preco):
+    se preco > 100
+        preco = preco - (preco*0.1)
+        print("O preço final é", preco)
+    senao:
+        print("O preço final é", preco)
+
+entrada("Diga um preco: ", x)
+
+desconto(x)
+

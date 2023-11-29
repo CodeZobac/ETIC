@@ -1,0 +1,16 @@
+lista = [1,2,3,4,4,5,6,6,7,7,8,8]
+
+funcao RemoveDuplicados:
+    mapa = ()
+    cada elemento em array:
+        se elemento em mapa.chaves():
+            mapa[elemento] += 1
+        senao:
+            mapa[elemento] = 0
+        
+    resultado = []
+    cada chave em mapa.chaves():
+        resultado.adiciona(chave)
+    retorna resultado
+
+imprime("A lista sem duplicados é: {RemoveDuplicados(lista)}")

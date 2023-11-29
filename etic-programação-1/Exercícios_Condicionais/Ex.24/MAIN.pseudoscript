@@ -1,0 +1,13 @@
+
+funcao eh_armstrong(ano):
+    numero_de_digitos = ano.tamanho()
+    soma = 0
+    para cada digito em ano:
+        soma += digito ** numero_de_digitos
+    retorna ano == soma
+
+entrada("Diga um ano", ano)
+se eh_armstrong(ano):
+    imprime("O ano {ano} é um numero de armstrong.")
+senao:
+    imprime("O ano {ano} não é um numero de armstrong")

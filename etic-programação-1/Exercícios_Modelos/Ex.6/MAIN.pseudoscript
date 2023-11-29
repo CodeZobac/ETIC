@@ -1,0 +1,16 @@
+modelo IMC:
+    funcao calculo(peso, altura):
+        imc = peso / (altura**2)
+        se imc < 22:
+            imprime("O teu BMI é {imc}, estás abaixo do peso")
+        senao imc >= 22 e imc < 27:
+            imprime("O teu BMI é {imc} tens um peso normal")
+        senao imc >= 27:
+            imprime("O teu BMI é {imc}, estás acima do peso")
+        
+
+entrada("Qual o seu peso?", peso)
+entrada("Qual a sua altura?", altura)
+
+
+IMC().calculo(peso, altura)

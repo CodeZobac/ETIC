@@ -1,0 +1,4 @@
+traducoes = ("como estas": "How are you", "como e que te chamas": "What is your name", "onde e que nasceste": "where were you born", "qual e a tua idade": "How old are you" )
+
+entrada("Digite a palavra que pretende traduzir", palavra)
+print("A tradução é: {traducoes[palavra]}")

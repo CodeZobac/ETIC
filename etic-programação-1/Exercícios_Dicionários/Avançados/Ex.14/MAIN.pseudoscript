@@ -1,0 +1,59 @@
+modelo Livro:
+    construtor(id, titulo, autor, disponivel):
+        Livro.id = id
+        Livro.titulo = titulo
+        Livro.autor = autor
+        Livro.disponivel = disponivel
+
+biblioteca = ()
+
+funcao adicionarLivro():
+    id = entrada("ID do livro: ")
+    titulo = entrada("Título do livro: ")
+    autor = entrada("Autor do livro: ")
+    se id nao em biblioteca:
+        biblioteca[id] = Livro(id, titulo, autor, Verdadeiro)
+    senao:
+        imprime("Livro já cadastrado no sistema.")
+
+funcao pesquisarLivro():
+    titulo = entrada("Insira o título do livro para pesquisa: ")
+    para cada id, livro em biblioteca:
+        se livro.titulo == titulo e livro.disponivel:
+            imprime("Livro encontrado: ID {livro.id}; Autor: {livro.autor}")
+        senao:
+            imprime("Livro não disponível ou não encontrado.")
+
+funcao emprestarLivro():
+    id = entrada("ID do livro a ser emprestado: ")
+    se id em biblioteca e biblioteca[id].disponivel:
+        biblioteca[id].disponivel = Falso
+        imprime("Livro emprestado com sucesso.")
+    senao:
+        imprime("Livro não disponível ou não encontrado.")
+
+funcao devolverLivro():
+    id = entrada("ID do livro a ser devolvido: ")
+    se id em acervo:
+        acervo[id].disponivel = Verdadeiro
+        imprime("Livro devolvido com sucesso.")
+    senao:
+        imprime("Livro não encontrado no sistema.")
+
+programa_on = Verdadeiro
+enquanto programa_on:
+    opcao = entrada("Escolha uma opção: \n1. Adicionar Livro \n2. Pesquisar Livro \n3. Emprestar Livro \n4. Devolver Livro \n9. Sair\n")
+
+    se opcao == "1":
+        adicionarLivro()
+    se opcao == "2":
+        pesquisarLivro()
+    se opcao == "3":
+        emprestarLivro()
+    se opcao == "4":
+        devolverLivro()
+    se opcao == "9":
+        programa_on = Falso
+    senao:
+        imprime("Opção inválida. Tente novamente.")
+

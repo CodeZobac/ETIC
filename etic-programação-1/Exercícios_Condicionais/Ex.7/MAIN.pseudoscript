@@ -1,0 +1,12 @@
+
+
+funcao Ehprimo(numero):
+    cada num em (2, numero - 1):
+        se numero % num != 0:
+            imprime("O número é primo")
+        senao:
+            imprime("O numero não é primo")
+
+entrada("Indique um número", num)
+
+Ehprimo(num)

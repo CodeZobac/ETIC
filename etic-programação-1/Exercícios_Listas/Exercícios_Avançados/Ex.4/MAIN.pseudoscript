@@ -1,0 +1,19 @@
+
+funcao ehPalindromo(array):
+    inicio = 0
+    fim = tamanho(array) - 1
+
+    enquanto inicio < fim:
+        se array[inicio] != array[fim]:
+            retorne Falso
+        inicio = inicio + 1
+        fim = fim - 1
+
+    retorne Verdadeiro
+
+
+entrada("Escreva uma palavra para saber se é um palíndromo", palavra)
+se ehPalindromo(palavra):
+    imprime("A palavra é um palíndromo.")
+senao:
+    imprime("A palavra não é um palíndromo.") 

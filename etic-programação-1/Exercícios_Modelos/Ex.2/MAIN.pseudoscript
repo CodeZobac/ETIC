@@ -1,0 +1,28 @@
+Guess the Number: Desenvolva um jogo em que o computador escolhe um número
+aleatório e o jogador tenta adivinhar qual é. O programa deve fornecer dicas para indicar se o
+palpite está muito alto ou muito baixo.
+
+modelo Adivinhar:
+    random():
+        numero_secreto = aleatorio(1, 100)
+        tentativas = 0
+        
+        print("Bem-vindo ao jogo")
+        print("Tenta adivinhar o número secreto entre 1 e 100.")
+        
+        enquanto Verdade:
+            entrada("Digite seu palpite: ", palpite)
+            tentativas += 1
+            
+            se palpite < numero_secreto:
+                print("O seu palpite é muito baixo. Tenta novamente.")
+            senao palpite > numero_secreto:
+                print("O seu palpite é muito alto. Tenta novamente.")
+            senao:
+                print(f"Parabéns! Acertas-te o número secreto {numero_secreto} em {tentativas} tentativas.")
+                break
+    
+
+jogo = Adivinhar()
+
+jogo.random()

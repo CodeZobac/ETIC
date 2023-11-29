@@ -1,0 +1,5 @@
+array = [100, 200, 300]
+
+array.adiciona(400)
+
+

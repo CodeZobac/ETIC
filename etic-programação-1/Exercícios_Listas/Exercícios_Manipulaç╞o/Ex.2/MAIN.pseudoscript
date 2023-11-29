@@ -1,0 +1,10 @@
+array1 = [1,2,3,4,5]
+array2 = [6,7,8,9]
+
+def concat(array1, array2):
+    retorne array1 + array2
+
+array3 = concat(array1, array2)
+
+print(array3)
+

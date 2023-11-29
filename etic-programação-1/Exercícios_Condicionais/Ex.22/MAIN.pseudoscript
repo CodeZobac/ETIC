@@ -1,0 +1,9 @@
+modelo Valor_aluguer:
+    funcao calcular_valor(dias, km):
+        preco = (dias * 50) + (km * 0.2)
+        imprime("O preco final é", preco)
+        
+entrada("Quantos dias esteve o carro alugado?", dias)
+entrada("Quantos KM andou o carro?", km)
+
+Valor_aluguer().calcular_valor(dias, km)

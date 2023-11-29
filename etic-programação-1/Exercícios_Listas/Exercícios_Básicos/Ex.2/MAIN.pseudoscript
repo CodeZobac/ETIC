@@ -1,0 +1,13 @@
+array = []
+
+def adicionar_lista():
+    cada numero em (1, 5)
+        entrada('Quais os números que deseja adicionar?', x)
+        array.adiciona(x)
+
+adicionar_lista()
+print(array)
+
+
+
+

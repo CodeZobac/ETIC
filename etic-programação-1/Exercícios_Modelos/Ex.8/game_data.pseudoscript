@@ -1,0 +1,241 @@
+data = [
+    {
+        'nome': 'Instagram',
+        'seguidores': 346,
+        'descricao': 'Rede digital',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Cristiano Ronaldo',
+        'seguidores': 215,
+        'descricao': 'Jogador de futebol',
+        'pais': 'Portugal'
+    },
+    {
+        'nome': 'Ariana Grande',
+        'seguidores': 183,
+        'descricao': 'Cantora',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Dwayne Johnson',
+        'seguidores': 181,
+        'descricao': 'Ator',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Selena Gomez',
+        'seguidores': 174,
+        'descricao': 'Cantora',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Kylie Jenner',
+        'seguidores': 172,
+        'descricao': 'Influencer',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Kim Kardashian',
+        'seguidores': 167,
+        'descricao': 'Influencer',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Lionel Messi',
+        'seguidores': 149,
+        'descricao': 'Jogador de futebol',
+        'pais': 'Argentina'
+    },
+    {
+        'nome': 'Beyoncé',
+        'seguidores': 145,
+        'descricao': 'Cantor',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Neymar',
+        'seguidores': 138,
+        'descricao': 'Jogador de futebol',
+        'pais': 'Brasil'
+    },
+    {
+        'nome': 'National Geographic',
+        'seguidores': 135,
+        'descricao': 'Revista',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Justin Bieber',
+        'seguidores': 133,
+        'descricao': 'Cantor',
+        'pais': 'Canada'
+    },
+    {
+        'nome': 'Taylor Swift',
+        'seguidores': 131,
+        'descricao': 'Cantor',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Kendall Jenner',
+        'seguidores': 127,
+        'descricao': 'Modelo',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Jennifer Lopez',
+        'seguidores': 119,
+        'descricao': 'Cantora',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Nicki Minaj',
+        'seguidores': 113,
+        'descricao': 'Cantor',
+        'pais': 'Trinidad e Tobago'
+    },
+    {
+        'nome': 'Nike',
+        'seguidores': 109,
+        'descricao': 'Marca de roupa',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Khloé Kardashian',
+        'seguidores': 108,
+        'descricao': 'Influencer',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Miley Cyrus',
+        'seguidores': 107,
+        'descricao': 'Cantora',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Katy Perry',
+        'seguidores': 94,
+        'descricao': 'Cantora',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Kevin Hart',
+        'seguidores': 89,
+        'descricao': 'Comediante',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Ellen DeGeneres',
+        'seguidores': 87,
+        'descricao': 'Comediante',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Real Madrid CF',
+        'seguidores': 86,
+        'descricao': 'Clube de futebol',
+        'pais': 'Espanha'
+    },
+    {
+        'nome': 'FC Barcelona',
+        'seguidores': 85,
+        'descricao': 'Clube de futebol',
+        'pais': 'Espanha'
+    },
+    {
+        'nome': 'Rihanna',
+        'seguidores': 81,
+        'descricao': 'Cantora',
+        'pais': 'Barbados'
+    },
+    {
+        'nome': 'Demi Lovato',
+        'seguidores': 80,
+        'descricao': 'Cantora',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Zendaya',
+        'seguidores': 68,
+        'descricao': 'Atriz e Cantora',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Shakira',
+        'seguidores': 66,
+        'descricao': 'Cantora',
+        'pais': 'Colombia'
+    },
+    {
+        'nome': 'Drake',
+        'seguidores': 65,
+        'descricao': 'Cantor',
+        'pais': 'Canada'
+    },
+    {
+        'nome': 'Chris Brown',
+        'seguidores': 64,
+        'descricao': 'Cantor',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'LeBron James',
+        'seguidores': 63,
+        'descricao': 'Jogador de basquetbol',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Vin Diesel',
+        'seguidores': 62,
+        'descricao': 'Actor',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Cardi B',
+        'seguidores': 67,
+        'descricao': 'Cantor',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'David Beckham',
+        'seguidores': 82,
+        'descricao': 'Jogador de futebol',
+        'pais': 'Reino Unido'
+    },
+    {
+        'nome': 'Billie Eilish',
+        'seguidores': 61,
+        'descricao': 'Cantor',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Justin Timberlake',
+        'seguidores': 59,
+        'descricao': 'Cantor ae actor',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'UEFA Champions League',
+        'seguidores': 58,
+        'descricao': 'Competição de futebol',
+        'pais': 'Europa'
+    },
+    {
+        'nome': 'NASA',
+        'seguidores': 56,
+        'descricao': 'Agencia espacial',
+        'pais': 'Estados Unidos'
+    },
+    {
+        'nome': 'Emma Watson',
+        'seguidores': 56,
+        'descricao': 'Actress',
+        'pais': 'Reino Unido'
+    },
+    {
+        'nome': 'Shawn Mendes',
+        'seguidores': 57,
+        'descricao': 'Cantor',
+        'pais': 'Canada'
+    }]

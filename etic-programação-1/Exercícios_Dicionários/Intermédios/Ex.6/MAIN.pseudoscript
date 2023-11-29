@@ -1,0 +1,23 @@
+compras = ()
+
+funcao adicionar_compras():
+    funcao = Verdade
+    enquanto funcao:
+        entrada("Pressione 1 para adicionar uma compra, 2 para calcular o total ou 0 para sair.", x)
+        se x = "1":
+            entrada("Adicione o nome do produto: ", y)
+            entrada("Adicione o preço: ", z)
+            compras["y"] = "z"
+        se x = "0" ou x = "2":
+            funcao = Falso 
+
+funcao calcular_total():
+    total = 0
+    para valor em compras.valores():
+        total += valor
+    retorna total
+
+adicionar_compras()
+
+
+print("A sua lista de compras foi: {compras} e deu um total de: {calcular_total()}")

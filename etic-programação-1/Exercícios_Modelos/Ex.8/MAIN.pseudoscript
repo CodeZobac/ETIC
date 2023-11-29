@@ -1,0 +1,42 @@
+from game_data import data
+import art
+import random
+
+
+
+imprime(art.logo)
+
+modelo Jogo:
+    funcao jogo_comparacao():
+        pessoa1 = random.choice(data)
+        pessoa2 = random.choice(data)
+        score = 0
+        is_game_on = Verdadeiro
+        enquanto is_game_on:
+            imprime("Compara A: {pessoa1["nome"]} que é {pessoa1["descricao"]} do país {pessoa1["pais"]}")
+            print(art.vs)
+            pessoa2 = random.choice(data)
+            imprime("Compara B: {pessoa2["nome"]} que é {pessoa2["descricao"]} do país {pessoa2["pais"]}")
+            entrada('Quem tem mais seguidores, "a" ou "b"?', resposta)
+            se resposta == 'a' e pessoa1['seguidores'] > pessoa2['seguidores']:
+                score += 1
+                print('Acertaste! O teu resultado atual é {score}')
+                pessoa1 = pessoa2
+            se resposta == 'b' e pessoa2['seguidores'] > pessoa1['seguidores']:
+                score += 1
+                print('Acertaste! O teu resultado atual é {score}')
+                pessoa1 = pessoa2
+            senoa:
+                print('Erraste, o teu resultado final foi: {score}')
+                is_game_on = Falso
+
+game_on = Verdadeiro
+
+enquanto game_on:
+    entrada('Pressiona 1 para jogar ou 2 para sair.', decisao)
+    se decisao == '1':
+        Jogo().jogo_comparacao()
+    senao:
+        game_on = Falso
+            
+            
