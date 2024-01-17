@@ -51,6 +51,9 @@
 //   console.log(i);
 // });
 
+const req = await fetch("api.com");
+const res = await req.json();
+
 let obj = {
   name: "afonso",
   age: 22,
