@@ -1,0 +1,28 @@
+anos_nascimento = ()
+
+programa_on = Verdade
+contador = 1
+
+enquanto programa_on:
+    entrada("Clique 1 para entrar no programa ou 0 para sair: ", x)
+    se x == "1":
+        se contador == 1:
+            entrada("Indique o ano em que nasceu: ", ano)
+            anos_nascimento[ano] = contador
+        senao:
+            entrada("Indique o ano em que nasceu: ", ano)
+            contador += 1
+            anos_nascimento[ano] = contador
+    
+def calcular_idade(dicionario):
+    ano_atual = 2023
+    cada chave em dicionario.chaves():
+        idade = ano_atual - idade
+        print("Quem nasceu em {chave} têm {idade} anos.")
+
+calcular_idade(anos_nascimento)
+
+
+
+
+

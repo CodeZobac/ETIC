@@ -1,0 +1,45 @@
+import art
+
+modelo Calculadora:
+    construtor(numero1,operador, numero2):
+        Calculadora.soma = numero1 + numero2
+        Calculadora.subtracao = numero1 - numero2
+        Calculadora.divisao = numero1 / numero2
+        Calculadora.multiplicacao = numero1 * numero2
+        Calculadora.operador = operador
+
+    funcao operar():
+        se Calculadora.operador == "+":
+            retorna Calculadora.soma
+        se Calculadora.operador == "-"
+            retorna Calculadora.subtracao
+        se Calculadora.operador == "/"
+            retorna Calculadora.divisao
+        se Calculadora.operador == "*"
+            retorna Calculadora.multiplicacao
+    
+
+funcao calcular():
+    print(art.logo)
+    inteiro(entrada("Qual o primeiro número?", numero1))
+    calculadora_on = Verdadeiro
+    enquanto calculadora_on:
+        entrada("Qual o operador que quer utilizar? (+,-,*,/)", operador)
+        inteiro(entrada("Qual o segundo número?", numero2))
+        resposta = Calculadora(numero1, operador, numero2)
+        print("O Resultado é {soma.operar()}")
+        
+        entrada('Escreva 's' para continuares a calcular com {resposta}, 'n' para começar um novo cálculo ou 'q' para sair da calculadora', escolha)
+        se resposta == 's':
+            numero1 = resposta
+        se resposta == 'n':
+            calculadora_on = Falso
+            calcular()
+        senao:
+            calculadora_on = Falso
+
+calcular()
+
+
+        
+        

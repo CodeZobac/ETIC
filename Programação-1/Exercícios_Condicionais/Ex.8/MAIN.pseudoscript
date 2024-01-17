@@ -1,0 +1,13 @@
+
+
+vogais = ["a", "e", "i", "o", "u"]
+
+funcao ehvogal(caracter):
+    se caracter em vogais:
+        imprime("É vogal")
+    senao:
+        imprime("É consoante")
+
+entrada("Digite um caracter: ", x)
+
+ehvogal(x)

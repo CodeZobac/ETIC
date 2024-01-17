@@ -1,0 +1,25 @@
+import Ex.2/MAIN como cria
+
+funcao somarMatrizes(matrizA, matrizB):
+    linhasA = tamanho(matrizA)
+    colunasA = tamanho(matrizA[0])
+    linhasB = tamanho(matrizB)
+    colunasB = tamanho(matrizB[0])
+
+    se linhasA != linhasB ou colunasA != colunasB:
+        retorne "As matrizes devem ter o mesmo tamanho"
+
+    matrizResultado = cria.criarMatriz(linhasA, colunasA)
+
+    para i de 0 até linhasA - 1:
+        para j de 0 até colunasA - 1:
+            matrizResultado[i][j] = matrizA[i][j] + matrizB[i][j]
+
+    retorne matrizResultado
+
+
+
+matrizA = [[1, 2, 3], [4, 5, 6]]
+matrizB = [[7, 8, 9], [10, 11, 12]]
+matrizResultado = somarMatrizes(matrizA, matrizB)
+imprime("O resultado da soma é: {matrizResultado}")

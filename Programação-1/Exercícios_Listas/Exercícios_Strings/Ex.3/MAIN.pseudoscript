@@ -1,0 +1,8 @@
+import Exercícios_Avançados/Ex.4/MAIN como palindromo 
+
+entrada("Escreva uma palavra para saber se é um palíndromo", palavra)
+
+se palindromo.ehPalindromo(palavra):
+    imprime("A palavra é um palíndromo.")
+senao:
+    imprime("A palavra não é um palíndromo.") 

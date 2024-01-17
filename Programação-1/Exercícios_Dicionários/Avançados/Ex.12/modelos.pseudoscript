@@ -1,0 +1,19 @@
+modelo Voo:
+    construtor(id, origem, destino, preco):
+        Voo.id = id
+        Voo.origem = origem
+        Voo.destino = destino
+        Voo.preco = preco
+
+modelo Hotel:
+    construtor(id, nome, localizacao, precoDiaria):
+        Hotel.id = id
+        Hotel.nome = nome
+        Hotel.localizacao = localizacao
+        Hotel.precoDiaria = precoDiaria
+
+modelo Carro:
+    construtor(id, modelo, precoDiario):
+        Carro.id = id
+        Carro.modelo = modelo
+        Carro.precoDiario = precoDiario

@@ -1,0 +1,60 @@
+modelo Compromisso:
+    construtor(data, horario, descricao):
+        Compromisso.data = data
+        Compromisso.horario = horario
+        Compromisso.descricao = descricao
+
+modelo QuartoHotel:
+    construtor(numero, tipo, disponivel):
+        QuartoHotel.numero = numero
+        QuartoHotel.tipo = tipo
+        QuartoHotel.disponivel = disponivel
+
+agendaCompromissos = {}
+quartosHotel = {}
+
+funcao adicionarCompromisso():
+    data = entrada("Data do compromisso (DD/MM/YYYY): ")
+    horario = entrada("Horário do compromisso (HH:MM): ")
+    descricao = entrada("Descrição do compromisso: ")
+    chave = data + " " + horario
+    se chave nao em agendaCompromissos:
+        agendaCompromissos[chave] = Compromisso(data, horario, descricao)
+    senao:
+        imprime("Horário já está ocupado.")
+
+funcao adicionarQuartoHotel(numero, tipo):
+    numero = entrada("Número do quarto: ")
+    tipo = entrada("Tipo do quarto (ex: simples, duplo): ")
+    se numero nao em quartosHotel:
+        quartosHotel[numero] = QuartoHotel(numero, tipo, Verdadeiro)
+    senao:
+        imprime("Número do quarto já existe.")
+
+funcao reservarQuartoHotel(numero):
+    numero = entrada("Número do quarto a reservar: ")
+    se numero em quartosHotel e quartosHotel[numero].disponivel:
+        quartosHotel[numero].disponivel = Falso
+        imprime("Quarto reservado com sucesso.")
+    senao:
+        imprime("Quarto não disponível ou não existe.")
+funcao mostrarQuartoHotel:
+    cada quarto, objeto em quartosHotel:
+        imprime("Quarto no. {quarto} | Tipologia {objeto.tipo}")
+
+programa_on = Verdadeiro
+enquanto programa_on:
+    opcao = entrada("Escolha uma opção: \n1. Adicionar Compromisso \n2. Adicionar Quarto de Hotel \n3. Reservar Quarto de Hotel \n9. Sair\n")
+
+    se opcao == "1":
+        adicionarCompromisso()
+    senao opcao == "2":
+        adicionarQuartoHotel()
+    senao opcao == "3":
+        mostrarQuartoHotel()
+        reservarQuartoHotel()
+    senao opcao == "9":
+        programa_on = Falso
+    senao:
+        imprime("Opção inválida. Tente novamente.")
+

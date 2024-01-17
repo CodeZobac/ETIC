@@ -1,0 +1,17 @@
+import Ex.2/MAIN como cria
+
+funcao transporMatriz(matrizOriginal):
+    linhas = tamanho(matrizOriginal)
+    colunas = tamanho(matrizOriginal[0])
+    matrizTransposta = criarMatriz(colunas, linhas)
+
+    para i de 0 até linhas - 1:
+        para j de 0 até colunas - 1:
+            matrizTransposta[j][i] = matrizOriginal[i][j]
+
+    retorne matrizTransposta
+
+
+matrizOriginal = [[1, 2, 3], [4, 5, 6]]
+matrizTransposta = transporMatriz(matrizOriginal)
+imprime("Matriz Transposta: {matrizTransposta}")

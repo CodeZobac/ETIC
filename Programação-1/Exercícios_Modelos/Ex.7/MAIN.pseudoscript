@@ -1,0 +1,37 @@
+
+
+
+
+
+
+modelo Conversor:
+    construtor():
+        Conversor.moedas = ("eur/usd": 1.0702, "usd/eur": 0.9344, "eur/chf": 0.9625, "chf/eur": 1.0386,"eur/cny": 7.8193, "cny/eur": 0.1278, "eur/jpy": 159.87, "jpy/eur": 0.0062, "eur/cad": 1.4653, "cad/eur": 0.6824, "eur/aud": 1.6478, "aud/eur": 0.6068)
+    
+    funcao converte_moedas(paridade_moedas, quantidade)
+        se paridade_moedas nao está em Conversor.moedas.chaves():
+            print("Esta paridade de moedas não consta na nossa base de dados, tente novamente com outras moedas.")
+            break
+        quantidade_convertida = Conversor.moedas[paridade_moedas] * quantidade
+        retorna print("Convertemos a sua moeda, deu um total de {quantidade_convertida}")
+
+
+
+
+
+
+
+
+
+
+programa_conversor = Verdadeiro
+
+enquanto programa_conversor:
+    entrada("Pressione 'c' para converter uma moeda ou 'q' para sair do programa.", resposta)
+    se resposta != 'q'
+        entrada("Deseja converter que moedas? (ex. eur/usd)", moeda_nativa)
+        entrada("Qual a quantidade que deseja converter?", quantidade)
+        Conversor().converte_moedas(moeda_nativa, quantidade)
+    senao:
+        programa_conversor = Falso
+

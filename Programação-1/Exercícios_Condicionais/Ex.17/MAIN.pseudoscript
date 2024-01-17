@@ -1,0 +1,14 @@
+modelo Verificador:
+    funcao tipo_idade(idade):
+        se idade <= 12:
+            imprime("Criança")
+        senao idade > 12 <= 17:
+            imprime("Adolescente")
+        senao idade > 18 <= 59:
+            imprime("Adulto")
+        senao:
+            imprime("Idoso")
+
+entrada("Qual é a sua idade?", idade)
+
+imprime("Você é um/uma {Verificador().tipo_idade(idade)}")

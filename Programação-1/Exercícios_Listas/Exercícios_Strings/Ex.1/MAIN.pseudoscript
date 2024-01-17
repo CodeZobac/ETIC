@@ -1,0 +1,11 @@
+funcao contarVogais(texto):
+    vogais = "aeiouAEIOU"
+    contador = 0
+    cada caractere em texto:
+        se caractere em vogais:
+            contador = contador + 1
+    retorne contador
+
+entrada("Escreva um texto para contar as vogais presentes: ", texto)
+numeroDeVogais = contarVogais(texto)
+imprime("Número de vogais na string: {numeroDeVogais}")

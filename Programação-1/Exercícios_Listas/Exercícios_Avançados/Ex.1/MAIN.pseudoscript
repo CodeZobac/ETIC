@@ -1,0 +1,14 @@
+funcao BubbleSort(array):
+    size = tamanho(array)
+    para i de (0, size - 1):
+        para j de (0, size - i - 1):
+            se array[j] > array[j + 1]:
+                temp = array[j]
+                array[j] = array[j + 1]
+                array[j + 1] = temp
+    retorne array
+
+
+Array = [64, 34, 25, 12, 22, 11, 90]
+arrayOrdenado = BubbleSort(Array)
+imprime("Array ordenado por ordem crescente: {arrayOrdenado}")

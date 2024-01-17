@@ -1,0 +1,28 @@
+
+funcao buscaBinaria(lista, alvo):
+    inicio = 0
+    fim = tamanho(lista) - 1
+
+    enquanto inicio <= fim:
+        meio = (inicio + fim) // 2
+        elementoMeio = lista[meio]
+
+        se elementoMeio == alvo:
+            retorne meio
+        senao se alvo < elementoMeio:
+            fim = meio - 1
+        senao:
+            inicio = meio + 1
+
+    retorne -1  
+
+
+Lista = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+alvo = 7
+
+indice = buscaBinaria(Lista, alvo)
+
+se indice != -1:
+    imprime("Elemento encontrado no índice: {indice}")
+senao:
+    imprime("Elemento não encontrado na lista.")

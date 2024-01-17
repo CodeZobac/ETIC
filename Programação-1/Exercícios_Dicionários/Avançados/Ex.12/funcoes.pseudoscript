@@ -1,0 +1,45 @@
+import bd
+import modelos
+
+
+funcao adicionarVoo():
+    id = entrada("Insira o ID do voo: ")
+    origem = entrada("Insira a origem do voo: ")
+    destino = entrada("Insira o destino do voo: ")
+    preco = entrada("Insira o preço do voo: ")
+    bd.voosDisponiveis[id] = modelos.Voo(id, origem, destino, preco)
+
+funcao adicionarHotel():
+    id = entrada("Insira o ID do hotel: ")
+    nome = entrada("Insira o nome do hotel: ")
+    localizacao = entrada("Insira a localização do hotel: ")
+    precoDiaria = entrada("Insira o preço da diária: ")
+    bd.hoteisDisponiveis[id] = modelos.Hotel(id, nome, localizacao, precoDiaria)
+
+funcao adicionarCarro():
+    id = entrada("Insira o ID do carro: ")
+    modelo = entrada("Insira o modelo do carro: ")
+    precoDiario = entrada("Insira o preço diário do aluguel: ")
+    carrosDisponiveis[id] = Carro(id, modelo, precoDiario)
+
+
+funcao reservarVoo():
+    idVoo = entrada("Insira o ID do voo a reservar: ")
+    se idVoo em bd.voosDisponiveis:
+        bd.reservas['voos'].adiciona(voosDisponiveis[idVoo])
+    senao:
+        imprime("Voo não disponível.")
+
+funcao reservarHotel():
+    idHotel = entrada("Insira o ID do hotel a reservar: ")
+    se idHotel em bd.hoteisDisponiveis:
+        bd.reservas['hoteis'].adiciona(hoteisDisponiveis[idHotel])
+    senao:
+        imprime("Hotel não disponível.")
+
+funcao reservarCarro():
+    idCarro = entrada("Insira o ID do carro a alugar: ")
+    se idCarro em bd.carrosDisponiveis:
+        bd.reservas['carros'].adiciona(carrosDisponiveis[idCarro])
+    senao:
+        imprime("Carro não disponível.")

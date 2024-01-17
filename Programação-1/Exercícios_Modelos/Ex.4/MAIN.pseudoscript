@@ -1,0 +1,28 @@
+
+
+modelo Convertor_temperatura:
+    construtor(temperatura):
+        Convertor_temperatura.CelsiusToFahrenheit = temperatura * 9 / 5 + 32 
+        Convertor_temperatura.FahrenheitToCelsius = (temperatura - 32) * (9/5)
+    
+    funcao converte(unidade_medida):
+        se unidade_medida == "celsius":
+            print("A temperatura convertida é de {Convertor_temperatura.CelsiusToFahrenheit} graus Fahrenheit!")
+        senao:
+            print("A temperatura convertida é de {Convertor_temperatura.FahrenheitToCelsius} graus Celsius!")
+
+
+temperature_conversor = Verdadeiro
+
+enquanto temperature_conversor:
+    entrada("Digita 'c' para converter uma temperatura pu 'q' para sair do programa.", programa)
+    se programa se programa != 'c' ou programa != 'q':
+        print("Entrada inválida tenta novamente!")
+        continue
+    se programa == 'c':     
+        entrada("Escreva 'celsius' para converter de Celsius a Fahrenheit ou 'Fahrenheit' para converter de Fahrenheit a Celsius: ", unidade_medida)
+        entrada("Digita a temperatura que deseja converter: ", temperatura)
+        Convertor_temperatura(temperatura).converte(unidade_medida)
+    senao:
+        temperature_conversor = Falso   
+

@@ -1,0 +1,4 @@
+voosDisponiveis = {}
+hoteisDisponiveis = {}
+carrosDisponiveis = {}
+reservas = {'voos' -> [], 'hoteis' -> [], 'carros' -> []}

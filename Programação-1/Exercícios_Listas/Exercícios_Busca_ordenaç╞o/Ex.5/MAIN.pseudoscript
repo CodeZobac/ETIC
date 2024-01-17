@@ -1,0 +1,19 @@
+
+funcao estaOrdenadoCrescente(array):
+    cada i de 0 até tamanho(array) - 1:
+        se array[i] > array[i + 1]:
+            retorne Falso
+    retorne Verdadeiro
+
+funcao estaOrdenadoDecrescente(array):
+    cada i de 0 até tamanho(array) - 1:
+        se array[i] < array[i + 1]:
+            retorne Falso
+    retorne Verdadeiro
+
+
+array = [1, 2, 3, 4, 5]
+se estaOrdenadoCrescente(array):
+    imprime("O array está ordenado.")
+senao:
+    imprime("O array não está ordenado.")

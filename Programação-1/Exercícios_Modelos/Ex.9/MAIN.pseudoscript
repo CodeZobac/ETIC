@@ -1,0 +1,45 @@
+
+
+
+
+
+
+modelo Gestor_Inventario:
+    construtor():
+        Gestor_Inventario.stock = ()
+
+    funcao adiciona():
+        entrada('Qual o item que deseja adicionar?', chave)
+        entrada('Qual a quantidade desse item?', valor)
+        se chave nao esta em Gestor_Inventario.stock.chaves():
+            Gestor_Inventario.stock[chave] = valor
+        senao:
+            print('Esse item já existe em stock, pressione 'e' para editar!')
+    
+    funcao remove():
+        entrada('Qual o item que deseja remover?', item)
+        novo_stock = ()
+        para cada chave, valor em Gestor_Inventario.stock:
+            se item != chave:
+                Gestor_Inventario.stock[chave] = valor
+            Gestor_Inventario.stock = novo_stock
+
+    funcao listar()
+        para cada chave, valor em Gestor_Inventario.stock:
+            print('{chave} -- {valor}')
+
+gestor_stock = Gestor_Inventario()
+
+stock_manager = Verdadeiro
+enquanto stock_manager:
+    entrada("Gestão de stock: pressione 'a' para adicionar um item, 'r' para remover um item, 'l' para listar um item ou 's' para sair. ", escolha)
+    se escolha == 'a':
+        gestor_stock.adiciona()
+    se escolha == 'r':
+        gestor_stock.remove()
+    se escolha == 'l': 
+        gestor_stock.listar()
+    se escolha == 's':
+        stock_manager = Falso
+    senao:
+        print('Escolha inválida, por favor tente novamente!')

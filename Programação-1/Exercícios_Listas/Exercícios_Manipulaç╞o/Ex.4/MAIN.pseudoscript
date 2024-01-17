@@ -1,0 +1,11 @@
+lista = [9,8,7,6,5,4,3,2,1]
+
+funcao InverteArray(lista):
+    maxIndex = lista.tamanho()-1
+    novaLista = []
+    enquanto maxIndex >= 0:
+        nova lista.adiciona(lista[maxIndex])
+        maxIndex -= 1
+    retorna novaLista
+
+imprime(f"O seu array invertido é: {InverteArray(lista)}")

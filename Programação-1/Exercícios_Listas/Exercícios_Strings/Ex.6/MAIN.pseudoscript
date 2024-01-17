@@ -1,0 +1,24 @@
+
+funcao dividirEmPalavras(texto):
+    delimitador = " "  
+    palavras = []
+    palavraAtual = ""
+
+    cada caractere em texto:
+        se caractere == delimitador:
+            se palavraAtual != "":
+                palavras.adiciona(palavraAtual)
+                palavraAtual = ""
+        senao:
+            palavraAtual = palavraAtual + caractere
+
+    # Adiciona a última palavra se existir
+    se palavraAtual != "":
+        adicionar(palavras, palavraAtual)
+
+    retorne palavras
+
+
+entrada("Escreva um texto para dividir em palavras", texto)
+arrayDePalavras = dividirEmPalavras(texto)
+imprime("Array de palavras: " + arrayDePalavras)

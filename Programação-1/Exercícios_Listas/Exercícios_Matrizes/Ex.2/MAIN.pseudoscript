@@ -1,0 +1,24 @@
+
+funcao preencherMatriz(linhas, colunas):
+    matriz = criarMatriz(linhas, colunas)
+
+    para i de 0 até linhas - 1:
+        para j de 0 até colunas - 1:
+            entrada("Insira o valor para linha no. {i} coluna no. {j}: ", valor)
+            matriz[i][j] = valor
+
+    retorne matriz
+
+funcao criarMatriz(linhas, colunas):
+    matriz = []
+    para i de 0 até linhas - 1:
+        linha = []
+        para j de 0 até colunas - 1:
+            linha.adiciona(j)  
+        matriz.adiciona(linha)
+    retorne matriz
+
+entrada("Deseja uma matriz de quantas linhas?", linhas)
+entrada("Deseja uma matriz de quantas colunas?", colunas)
+matriz = preencherMatriz(linhas, colunas)
+imprime("Matriz preenchida: " + matriz)

@@ -1,0 +1,43 @@
+modelo Transacao:
+    construtor(tipo, descricao, valor):
+        Transacao.tipo = tipo  
+        Transacao.descricao = descricao
+        Transacao.valor = valor
+
+transacoes = ('despesas': [], 'receitas': [])
+
+funcao adicionarTransacao():
+    tipo = entrada("Tipo de transação ('despesa' ou 'receita'): ")
+    descricao = entrada("Descrição da transação: ")
+    valor = entrada("Valor da transação: ")
+    transacao = Transacao(tipo, descricao, valor)
+    se tipo == "despesa":
+        adicionar(transacoes['despesas'], transacao)
+    senao se tipo == "receita":
+        adicionar(transacoes['receitas'], transacao)
+
+funcao calcularSaldo():
+    saldo = 0
+    para cada despesa em transacoes['despesas']:
+        saldo = saldo - despesa.valor
+    para cada receita em transacoes['receitas']:
+        saldo = saldo + receita.valor
+    retorne saldo
+
+funcao exibirSaldo():
+    saldo = calcularSaldo()
+    imprime("Saldo atual: " + saldo)
+
+programa_on = Verdadeiro
+enquanto programa_on:
+    opcao = entrada("Escolha uma opção: \n1. Registrar Transação \n2. Exibir Saldo \n9. Sair\n")
+
+    se opcao == "1":
+        entradaAdicionarTransacao()
+    se opcao == "2":
+        exibirSaldo()
+    se opcao == "9":
+        programa_on = Falso
+    senao:
+        imprime("Opção inválida. Tente novamente.")
+

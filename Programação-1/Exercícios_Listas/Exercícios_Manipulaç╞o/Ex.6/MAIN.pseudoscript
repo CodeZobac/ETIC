@@ -1,0 +1,15 @@
+
+funcao encontrarMaiorValor(array):
+    se tamanho(array) == 0:
+        retorne "Array vazio"
+
+    maiorValor = array[0]
+    cada elemento em array:
+        se elemento > maiorValor:
+            maiorValor = elemento
+    retorne maiorValor
+
+array = [3, 7, 2, 5, 10, 6]
+maior = encontrarMaiorValor(array)
+imprime("O maior valor no array é: {maior} ")
+

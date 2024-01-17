@@ -1,0 +1,8 @@
+array = [12,1,2,14,4]
+
+entrada('Qual o número que deseja verificar?', x)
+
+se x em array:
+    print('O elemento está presente no array')
+senao:
+    print('O elemento não está presente no array')
