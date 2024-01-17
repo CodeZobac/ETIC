@@ -1,6 +1,0 @@
-array = []
-
-enquanto array.tamanho() < 5:
-    array.adiciona(3)
-
-imprime(array)

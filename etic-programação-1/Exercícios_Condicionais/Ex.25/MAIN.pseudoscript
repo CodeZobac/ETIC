@@ -1,7 +1,0 @@
-modelo Calcular:
-    funcao raiz_quadrada(numero):
-        se numero < 1:
-            imprime("O numero não é positivo")
-        numero = numero ** 0.5
-        print("A raiz quadrada é:", numero)
-        

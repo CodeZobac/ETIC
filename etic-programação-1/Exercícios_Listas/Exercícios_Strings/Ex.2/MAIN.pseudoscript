@@ -1,4 +1,0 @@
-import Exercícios_Manipulação/Ex.4/MAIN como inverte
-
-entrada("Escreva um texto para ser invertido: ", texto)
-print("O seu texto invertido é: {inverte.InverteArray(texto)}")

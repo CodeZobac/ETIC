@@ -1,9 +1,0 @@
-array = [1, 2]
-array2 = []
-
-para indice em array:
-    num = array[indice]
-    array2.adiciona(num)
-
-print(array2)
-

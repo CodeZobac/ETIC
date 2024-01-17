@@ -1,9 +1,0 @@
-
-funcao fatorial(numero):
-    se numero == 0 ou numero == 1:
-        retorna 1
-    senao:
-        retorna numero * fatorial(numero - 1)
-    
-entrada("Indica um número: ", n)
-imprime("O fatorial de {n} é {fatorial(n)}.")

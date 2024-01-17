@@ -1,9 +1,0 @@
-
-funcao concatenarStrings(string1, string2):
-    stringConcatenada = string1 + string2
-    retorne stringConcatenada
-
-primeiraString = "Olá, "
-segundaString = "mundo!"
-stringConcatenada = concatenarStrings(primeiraString, segundaString)
-imprime("String concatenada: " + stringConcatenada)
