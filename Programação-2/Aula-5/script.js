@@ -50,7 +50,7 @@ window.onload = () => {
           default:
             break;
         }
-        console.log(vejicles);
+        console.log(vehicles);
       };
       button.innerText = element.brand;
       li.appendChild(button);
@@ -64,5 +64,4 @@ window.onload = () => {
   }
 };
 
-const car = new Car();
-const motorcycle = new Motorcycle();
+

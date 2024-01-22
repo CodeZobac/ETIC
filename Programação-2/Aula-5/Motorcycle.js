@@ -1,8 +1,10 @@
 import Veihcle from "./Veihcle.js";
 
 export default class Motorcycle extends Veihcle {
-  constructor(data) {
-    super(data);
-    console.log("Motorcycle speed", this.speed);
+  constructor(element) {
+    super(element);
+    this.speed = element.speed
+    this.brand = element.brand
+    console.log("Brand:", this.brand, "Speed:", this.speed);
   }
 }
