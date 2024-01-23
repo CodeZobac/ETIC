@@ -19,6 +19,9 @@ const createLiContent = (content) => {
   //   console.log("Button clicked");});
 
   btn.onclick = () => {
+    if (playButton.className === "inactive") {
+      playButton.className = "";
+    }
     if (currentVehicle) {
       currentVehicle.destroy();
     }
