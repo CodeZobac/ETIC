@@ -17,15 +17,26 @@
 // mult = dois(soma, 2);
 // console.log(mult);
 
-const arr = [2, 45, 34, 2];
+// const arr = [2, 45, 34, 2];
 
-const media = (array) => {
-  array.forEach((element) => {
-    soma += element;
-    indice = array.length();
-    media = soma / indice;
-    return media;
-  });
-};
+// const media = (array) => {
+//   array.forEach((element) => {
+//     soma += element;
+//     indice = array.length();
+//     media = soma / indice;
+//     return media;
+//   });
+// };
 
-console.log(media(arr));
+// console.log(media(arr));
+
+class Test {
+  constructor() {
+    this.dois();
+  }
+  dois() {
+    return 2;
+  }
+}
+const dois = new Test();
+console.log(dois.dois());
