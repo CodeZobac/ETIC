@@ -1,0 +1,38 @@
+[
+  {
+    "type": "car",
+    "brand": "Ferrari",
+    "speed": 320,
+    "image": "media/ferrari.jpeg"
+  },
+  {
+    "type": "car",
+    "brand": "Fiat",
+    "speed": 170,
+    "image": "media/fiat.jpg"
+  },
+  {
+    "type": "motorcycle",
+    "brand": "Ducati",
+    "speed": 280,
+    "image": "media/ducatti.jpg"
+  },
+  {
+    "type": "motorcycle",
+    "brand": "Kawasaki",
+    "speed": 300,
+    "image": "media/kawasaki.png"
+  },
+  {
+    "type": "car",
+    "brand": "Renault",
+    "speed": 175,
+    "image": "media/renault.jpg"
+  },
+  {
+    "type": "boat",
+    "brand": "Titanic",
+    "speed": 120,
+    "image": "media/titanic.jpg"
+  }
+]
