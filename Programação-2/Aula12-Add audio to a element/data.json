@@ -1,0 +1,58 @@
+[
+  {
+    "type": "bird",
+    "name": "seagull",
+    "canFly": true,
+    "sound": "https://cdn.pixabay.com/audio/2021/08/04/audio_99f2a93e15.mp3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/%D0%92%D0%BE%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D1%87%D0%B0%D0%B9%D0%BA%D0%B0_%D0%B2_%D0%BF%D0%BE%D0%BB%D1%91%D1%82%D0%B5_-_Larus_vegae_mongolicus.jpg"
+  },
+  {
+    "type": "bird",
+    "name": "chicken",
+    "canFly": false,
+    "sound": "https://cdn.pixabay.com/audio/2023/12/06/audio_41325eb66f.mp3",
+    "image": "https://i.guim.co.uk/img/media/30646649ad38eca6e8ddd6108af6de13e43117a4/475_196_4518_3323/master/4518.jpg?width=465&dpr=1&s=none"
+  },
+  {
+    "type": "bird",
+    "name": "eagle",
+    "canFly": true,
+    "sound": "",
+    "image": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/306062281/1800"
+  },
+  {
+    "type": "mammal",
+    "name": "horse",
+    "sound": "",
+    "numLegs": 4,
+    "image": "https://cdn.britannica.com/93/1293-050-B835357D/Morgan-stallion-bay-coat.jpg"
+  },
+  {
+    "type": "mammal",
+    "name": "human",
+    "sound": "",
+    "numLegs": 2,
+    "image": "https://www.kenhub.com/thumbor/4wdnjNQFtAGLgKEtBO2IgF2hF3Q=/fit-in/800x1600/filters:watermark(/images/logo_url.png,-10,-10,0):background_color(FFFFFF):format(jpeg)/images/article/en/the-human-anatomy/PSXgfeg9rZtrnvNut7D8uQ_Human_anatomy.png"
+  },
+  {
+    "type": "reptile",
+    "name": "crocodile",
+    "sound": "",
+    "isAgressive": true,
+    "image": "https://c02.purpledshub.com/uploads/sites/62/2014/11/GettyImages-123529247-2a29d6c.jpg"
+  },
+  {
+    "type": "reptile",
+    "name": "gecko",
+    "sound": "",
+    "isAgressive": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Eublepharis_macularius1.jpg/800px-Eublepharis_macularius1.jpg"
+  },
+  {
+    "type": "mammal",
+    "name": "whale",
+    "sound": "",
+    "numLegs": 0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Southern_right_whale.jpg"
+  }
+]
