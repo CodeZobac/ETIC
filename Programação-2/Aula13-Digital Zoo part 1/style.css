@@ -1,0 +1,39 @@
+* {
+    font-family: Tahoma;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    max-height: 100dvh;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#images-container {
+    flex: 1;
+    overflow-y: scroll;
+    border: 2px solid red;
+}
+#audio-container {
+    display: flex;
+    flex: 1;
+    min-height: 90px;
+}
+button {
+    flex: 1;
+}
+img {
+    width: 100%;
+}
+
+.active {
+    border: 5px solid red;
+}
