@@ -68,5 +68,12 @@
     "isFreshWater": true,
     "sound": "https://cdn.pixabay.com/audio/2021/08/04/audio_9fb0d24edb.mp3",
     "image": "https://i.ebayimg.com/images/g/r9oAAOSwEK5g-mK5/s-l1600.jpg"
+  },
+  {
+    "type": "inseto",
+    "name": "grilo",
+    "canFly": true,
+    "sound": "https://r4---sn-apn7en7e.c.2mdn.net/videoplayback/id/93dbdcd5c93dd4f4/itag/15/source/doubleclick/requiressl/yes/ratebypass/yes/mime/video%2Fmp4/ip/0.0.0.0/ipbits/0/expire/2144448000/sparams/expire,id,ip,ipbits,itag,mh,mime,mip,mm,mn,ms,mv,mvi,pl,ratebypass,requiressl,source/signature/40F0A1366DEA7B329979E9CECADA59B8CBA86E8B.103F6D650E175833110D5FD2FB7C3D2191AC54E9/key/cms1/cms_redirect/yes/mh/KF/mip/85.244.90.90/mm/42/mn/sn-apn7en7e/ms/onc/mt/1706823877/mv/u/mvi/4/pl/24/file/file.mp4",
+    "image": "https://medias.revistaoeste.com/qa-staging/wp-content/uploads/2023/07/Grilo-Rosa.jpeg.webp"
   }
 ]
