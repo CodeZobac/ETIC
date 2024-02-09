@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Protest+Revolution&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Protest+Revolution&display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Protest Revolution", sans-serif;
+  margin-top: 2vh;
+  font-size: 3vw;
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Protest Revolution", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+
+  text-shadow: #fff;
+  margin-top: -1vh;
+  font-size: 2vw;
+  color: #333;
+  text-align: center;
+}
+
+#paintings-button,
+#sculptures-button,
+#photos-button {
+  display: inline-flex;
+  flex-direction: row; /* Changed from column to row */
+
+  text-decoration: none;
+  background: bisque;
+  border-radius: 2vw;
+  font-family: "Honk", sans-serif;
+  font-size: 2vw;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-inline: 2vw;
+  justify-content: center; /* Optional: Centers the buttons horizontally */
+  align-items: center; /* Optional: Centers the buttons vertically */
+  gap: 1vw; /* Optional: Adds space between buttons */
+}
+
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#paintings-icon {
+  background-image: url("media/paint-palette.png");
+}
+
+#sculptures-icon {
+  background-image: url("media/milo-venus.png");
+}
+
+#images-icon {
+  background-image: url("media/camera.png");
+}
+
+.menu-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.item img {
+  max-height: 400px;
+}

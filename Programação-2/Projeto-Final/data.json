@@ -2,9 +2,9 @@
   {
     "type": "painting",
     "title": "Mona Lisa",
-    "type-of-paint": "",
-    "style": "Renaissance",
     "year": "1505",
+    "style": "Renaissance",
+    "type-of-paint": "",
     "image": "https://cdn.shopify.com/s/files/1/0047/4231/6066/files/mona_liza_800x.jpg",
     "artist": "Leonardo Da Vinci"
   },
@@ -62,18 +62,20 @@
     "artist": "Malcolm Brown"
   },
   {
-    "type": "",
-    "title": "",
-    "medium": "",
-    "image": "",
-    "artist": ""
+    "type": "photo",
+    "title": "Raising the Flag at Iwo Jima",
+    "year": "February 23, 1945",
+    "camera": "",
+    "image": "https://photographyproject.uk/wp-content/uploads/2022/01/23-2103-post/Raising_the_Flag_on_Iwo_Jima.jpg",
+    "artist": "Joe Rosenthal"
   },
   {
-    "type": "",
-    "title": "",
-    "medium": "",
-    "image": "",
-    "artist": ""
+    "type": "photo",
+    "title": "Guerrillero Heroico",
+    "year": "1960",
+    "camera": "",
+    "image": "https://photographyproject.uk/wp-content/uploads/2022/01/23-2103-post/Che-cropped.jpg",
+    "artist": "Alberto Korda"
   },
   {
     "type": "",

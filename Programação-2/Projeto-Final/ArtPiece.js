@@ -2,36 +2,33 @@ export default class ArtPiece {
   #image;
   #callback;
   #data;
+  view;
   constructor(data, callback) {
     this.#data = data;
-
     this.#callback = callback;
-
+    this.view = document.createElement("div");
+    this.view.className = "item";
     this.#image = document.createElement("img");
     this.#image.src = this.#data.image;
     this.#image.onclick = () => this.#callback;
 
-    const container = document.querySelector("#images-container");
-    container.appendChild(this.#image);
+    this.view.appendChild(this.#image);
   }
-
-  // createImage(type) {
-  //   const div = document.createElement("div");
-  //   div.className = type;
-  //   const img = document.createElement("img");
-  //   img.src = this.#image;
-  //   div.appendChild(img);
-  //   document.querySelector("body").appendChild(div);
-  // }
 
   artInfo() {
     return (
       this.#data.type +
       "created by" +
       this.#data.artist +
+      "in the year" +
+      this.#data.year +
       "with the title" +
       this.#data.title
     );
+  }
+
+  get data() {
+    return this.#data;
   }
 
   get type() {
