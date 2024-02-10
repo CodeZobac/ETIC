@@ -5,28 +5,71 @@ import ArtPiece from "./ArtPiece.js";
 
 export default class Gallery {
   #callback;
-  #photos;
-  #paintings;
-  #sculptures;
   #currentArt = null;
   view;
   artPieces = [];
   constructor(callback) {
-    this.#photos = [];
-    this.#paintings = [];
-    this.#sculptures = [];
     this.#callback = callback;
     this.view = document.querySelector("#gallery-view");
     console;
   }
 
-  filterArt(type) {
+  showSlide(type) {
     const arr = this.artPieces.filter((item) => item.type === type);
     console.log(arr);
-    this.view.innerHTML = "";
-    arr.forEach((item) => {
-      this.view.appendChild(item.view);
+
+    const container = document.querySelector("#gallery-view");
+    container.innerHTML = "";
+    let currentIndex = 0;
+
+    const slides = arr.map((artPiece) => {
+      const slide = document.createElement("div");
+      slide.className = "item";
+      slide.appendChild(artPiece.view);
+      slide.style.display = "none";
+      container.appendChild(slide);
+      return slide;
     });
+
+    if (slides.length > 0) {
+      slides[currentIndex].style.display = "block";
+    }
+
+    const showSlide = (index) => {
+      slides[currentIndex].style.display = "none";
+      currentIndex = (index + slides.length) % slides.length;
+      slides[currentIndex].style.display = "block";
+      console.log(arr[currentIndex]);
+    };
+
+    const showInfo = () => {
+      const currentSlide = arr[currentIndex];
+      const infoContainer = document.querySelector(".info-container");
+      infoContainer.innerHTML = "";
+      const text = document.createElement("p");
+      text.innerText = currentSlide.artInfo();
+      infoContainer.appendChild(text);
+
+      // console.log(currentSlide.artInfo());
+    };
+
+    const left = document.querySelector("#left");
+    left.onclick = () => {
+      const infoContainer = document.querySelector(".info-container");
+      infoContainer.innerHTML = "";
+      showSlide(currentIndex - 1);
+    };
+    const right = document.querySelector("#right");
+    right.onclick = () => {
+      const infoContainer = document.querySelector(".info-container");
+      infoContainer.innerHTML = "";
+      showSlide(currentIndex + 1);
+    };
+
+    const info = document.querySelector("#info");
+    info.onclick = () => {
+      showInfo();
+    };
   }
 
   addArt(artPiece) {
@@ -55,64 +98,20 @@ export default class Gallery {
       this.#currentArt.active = false;
     }
 
-    switch (artPiece.type) {
-      case "sculpture":
-        this.#currentArt = this.#sculptures.find(
-          (art) => art.name === artPiece.name
-        );
-        this.#currentArt.active = true;
-        this.#callback(artPiece);
-
-      case "painting":
-        this.#currentArt = this.#paintings.find(
-          (art) => art.name === artPiece.name
-        );
-        this.#currentArt.active = true;
-        this.#callback(artPiece);
-
-      case "photo":
-        this.#currentArt = this.#photos.find(
-          (art) => art.name === artPiece.name
-        );
-        this.#currentArt.active = true;
-        this.#callback(artPiece);
-    }
+    this.#currentArt = this.artPieces.find((art) => art.name === artPiece.name);
+    this.#currentArt.active = true;
+    this.#callback(artPiece);
   }
 
-  showSlide(type) {
-    const arr = this.artPieces.filter((item) => item.type === type);
-    console.log(arr);
-
-    const container = document.querySelector("#gallery-view");
-    container.innerHTML = ""; // Clear existing slides
-    let currentIndex = 0;
-
-    const slides = arr.map((artPiece) => {
-      const slide = document.createElement("div");
-      slide.className = "item";
-      slide.appendChild(artPiece.view); // Assuming artPiece.view is correct
-      slide.style.display = "none";
-      container.appendChild(slide);
-      return slide;
-    });
-
-    if (slides.length > 0) {
-      slides[currentIndex].style.display = "block";
-    }
-
-    const showSlide = (index) => {
-      slides[currentIndex].style.display = "none";
-      currentIndex = (index + slides.length) % slides.length;
-      slides[currentIndex].style.display = "block";
-    };
-
-    const left = document.querySelector("#left");
-    left.onclick = () => {
-      showSlide(currentIndex - 1);
-    };
-    const right = document.querySelector("#right");
-    right.onclick = () => {
-      showSlide(currentIndex + 1);
-    };
-  }
+  // createButton() {
+  //   const container = document.querySelector("#gallery-view");
+  //   const left = document.createElement("button");
+  //   const right = document.createElement("button");
+  //   left.id = "left";
+  //   right.id = "right";
+  //   left.innerText = "Previous";
+  //   right.innerText = "Next";
+  //   right.appendChild(container);
+  //   right.appendChild(container);
+  // }
 }

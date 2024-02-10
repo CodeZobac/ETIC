@@ -57,7 +57,7 @@
     "type": "photo",
     "title": "The burning monk",
     "year": "June 11, 1963",
-    "camera": "",
+    "description": "",
     "image": "https://photographyproject.uk/wp-content/uploads/2022/01/21-2103-post/ap_browne_07.jpg",
     "artist": "Malcolm Brown"
   },
@@ -65,17 +65,17 @@
     "type": "photo",
     "title": "Raising the Flag at Iwo Jima",
     "year": "February 23, 1945",
-    "camera": "",
+    "description": "",
     "image": "https://photographyproject.uk/wp-content/uploads/2022/01/23-2103-post/Raising_the_Flag_on_Iwo_Jima.jpg",
     "artist": "Joe Rosenthal"
   },
   {
     "type": "photo",
-    "title": "Guerrillero Heroico",
-    "year": "1960",
-    "camera": "",
-    "image": "https://photographyproject.uk/wp-content/uploads/2022/01/23-2103-post/Che-cropped.jpg",
-    "artist": "Alberto Korda"
+    "title": "Lunch a top of a skyscraper",
+    "year": "1932",
+    "description": "This image of workers taking a daredevil’s lunch break at the top of a skyscraper certainly makes the viewer dizzy but it also brings their attention to the very risky life the workers building the Rockefeller Center lead.",
+    "image": "https://www.zupimages.net/up/21/32/6l17.jpg",
+    "artist": "Unknown"
   },
   {
     "type": "",
@@ -83,5 +83,9 @@
     "medium": "",
     "image": "",
     "artist": ""
+  },
+
+  {
+    "initialText": "Sejam bem vindos á Art Gallery que inspirou o Louvre! Muito mais que um museu físico, veja agora na sua casa as melhores obras primas criadas pela humanidade!"
   }
 ]

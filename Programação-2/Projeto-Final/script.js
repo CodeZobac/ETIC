@@ -1,29 +1,67 @@
 import Gallery from "./Gallery.js";
+let data;
 
 window.onload = async () => {
-  const data = await getJson();
+  data = await getJson();
+
+  const info = document.querySelector("#info");
+  info.style.display = "none";
+
+  const left = document.querySelector("#left");
+  left.style.display = "none";
+
+  const right = document.querySelector("#right");
+  right.style.display = "none";
 
   const gallery = new Gallery((art) => {
     console.log(art);
   });
+
   data.forEach((item) => {
     gallery.addArt(item);
   });
+
   document.querySelector("#photos-button").onclick = () => {
+    const init = document.querySelector("#initial-text");
+    init.style.display = "none";
+    left.style.display = "inline-flex";
+    right.style.display = "inline-flex";
+    info.style.display = "block";
+
     gallery.showSlide("photo");
+
     const h2 = document.querySelector("h2");
     h2.innerText = "Photos Gallery";
   };
+
   document.querySelector("#sculptures-button").onclick = () => {
+    const init = document.querySelector("#initial-text");
+    init.style.display = "none";
+    left.style.display = "inline-flex";
+    right.style.display = "inline-flex";
+    info.style.display = "block";
+
     gallery.showSlide("sculpture");
+
     const h2 = document.querySelector("h2");
     h2.innerText = "Sculptures Gallery";
   };
-  document.querySelector("#paintings-button").onclick = async () => {
-    await gallery.showSlide("painting");
+
+  document.querySelector("#paintings-button").onclick = () => {
+    const init = document.querySelector("#initial-text");
+    init.style.display = "none";
+    left.style.display = "inline-flex";
+    right.style.display = "inline-flex";
+    info.style.display = "block";
+
+    gallery.showSlide("painting");
+
     const h2 = document.querySelector("h2");
     h2.innerText = "Paintings Gallery";
   };
+
+  const view = document.querySelector("#gallery-view");
+  view.innerHTML = "";
 };
 
 const getJson = async () => {

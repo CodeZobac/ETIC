@@ -11,6 +11,21 @@ html {
   background-color: #e8e8e8;
 }
 
+a {
+  text-decoration: none;
+}
+p {
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+#initial-text {
+  margin-top: 20vh;
+  margin-bottom: 30vh;
+  word-spacing: 10px;
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
@@ -39,12 +54,23 @@ h2 {
   text-align: center;
 }
 
+#left,
+#right {
+  font-size: 1.4vw;
+  size: 100%;
+  display: inline-flex;
+  margin: 0 22vw;
+  margin-top: 7.35vh;
+  margin-bottom: 4vh;
+  transition: transform 0.3s ease;
+}
+
 #paintings-button,
 #sculptures-button,
-#photos-button {
+#photos-button,
+#info {
   display: inline-flex;
-  flex-direction: row; /* Changed from column to row */
-
+  flex-direction: row;
   text-decoration: none;
   background: bisque;
   border-radius: 2vw;
@@ -53,9 +79,9 @@ h2 {
   text-align: center;
   transition: transform 0.3s ease;
   margin-inline: 2vw;
-  justify-content: center; /* Optional: Centers the buttons horizontally */
-  align-items: center; /* Optional: Centers the buttons vertically */
-  gap: 1vw; /* Optional: Adds space between buttons */
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
 }
 
 .menu-icon {
@@ -85,12 +111,22 @@ h2 {
   cursor: pointer;
   padding: 0;
   margin: 10px;
+  margin-left: 3vw;
+  margin-top: -3vh;
 }
 
 button:hover {
   transform: scale(1.1);
 }
 
+.item:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
 .item img {
-  max-height: 400px;
+  max-height: 330px;
+  max-width: 600px;
+  margin-top: 1vh;
+  margin-left: 1.5vw;
 }

@@ -17,12 +17,13 @@ export default class ArtPiece {
 
   artInfo() {
     return (
+      "This is a " +
       this.#data.type +
-      "created by" +
+      " created by " +
       this.#data.artist +
-      "in the year" +
+      " in the year " +
       this.#data.year +
-      "with the title" +
+      " with the title " +
       this.#data.title
     );
   }

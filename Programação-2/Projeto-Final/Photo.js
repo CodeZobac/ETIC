@@ -6,4 +6,8 @@ export default class Photo extends ArtPiece {
     super(data, callback);
     this.#year = data.year;
   }
+  showInfo(data) {
+    let parentInfo = super.showInfo();
+    return parentInfo + "";
+  }
 }
