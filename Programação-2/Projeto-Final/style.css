@@ -54,8 +54,22 @@ h2 {
   text-align: center;
 }
 
-#left,
+#left {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4vw;
+  size: 100%;
+  display: inline-flex;
+  margin: 0 20vw;
+  margin-top: 7.35vh;
+  margin-bottom: 4vh;
+  transition: transform 0.3s ease;
+}
 #right {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 1.4vw;
   size: 100%;
   display: inline-flex;
@@ -72,16 +86,17 @@ h2 {
   display: inline-flex;
   flex-direction: row;
   text-decoration: none;
-  background: bisque;
+  background: #e8e8e8;
   border-radius: 2vw;
   font-family: "Honk", sans-serif;
   font-size: 2vw;
   text-align: center;
   transition: transform 0.3s ease;
   margin-inline: 2vw;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+
   gap: 1vw;
+  cursor: pointer;
 }
 
 .menu-icon {
