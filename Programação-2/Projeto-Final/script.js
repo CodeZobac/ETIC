@@ -22,8 +22,8 @@ window.onload = async () => {
   });
 
   document.querySelector("#photos-button").onclick = () => {
-    const init = document.querySelector("#initial-text");
-    init.style.display = "none";
+    document.querySelector("#initial-text").style.display = "none";
+    document.querySelector(".info-container").innerHTML = "";
     left.style.display = "inline-flex";
     right.style.display = "inline-flex";
     info.style.display = "block";
@@ -35,8 +35,8 @@ window.onload = async () => {
   };
 
   document.querySelector("#sculptures-button").onclick = () => {
-    const init = document.querySelector("#initial-text");
-    init.style.display = "none";
+    document.querySelector("#initial-text").style.display = "none";
+    document.querySelector(".info-container").innerHTML = "";
     left.style.display = "inline-flex";
     right.style.display = "inline-flex";
     info.style.display = "block";
@@ -48,8 +48,8 @@ window.onload = async () => {
   };
 
   document.querySelector("#paintings-button").onclick = () => {
-    const init = document.querySelector("#initial-text");
-    init.style.display = "none";
+    document.querySelector("#initial-text").style.display = "none";
+    document.querySelector(".info-container").innerHTML = "";
     left.style.display = "inline-flex";
     right.style.display = "inline-flex";
     info.style.display = "block";
