@@ -1,7 +1,6 @@
 import Painting from "./Painting.js";
 import Photo from "./Photo.js";
 import Sculpture from "./Sculpture.js";
-import ArtPiece from "./ArtPiece.js";
 
 export default class Gallery {
   #callback;
@@ -39,7 +38,6 @@ export default class Gallery {
       slides[currentIndex].style.display = "none";
       currentIndex = (index + slides.length) % slides.length;
       slides[currentIndex].style.display = "block";
-      console.log(arr[currentIndex]);
     };
 
     const showInfo = () => {
@@ -47,6 +45,7 @@ export default class Gallery {
       const infoContainer = document.querySelector(".info-container");
       infoContainer.innerHTML = "";
       const text = document.createElement("p");
+      text.className = "info";
       text.innerText = currentSlide.artInfo();
       infoContainer.appendChild(text);
 
@@ -55,20 +54,23 @@ export default class Gallery {
 
     const left = document.querySelector("#left");
     left.onclick = () => {
-      const infoContainer = document.querySelector(".info-container");
-      infoContainer.innerHTML = "";
+      document.querySelector(".info-container").innerHTML = "";
       showSlide(currentIndex - 1);
     };
     const right = document.querySelector("#right");
     right.onclick = () => {
-      const infoContainer = document.querySelector(".info-container");
-      infoContainer.innerHTML = "";
+      document.querySelector(".info-container").innerHTML = "";
       showSlide(currentIndex + 1);
     };
 
     const info = document.querySelector("#info");
-    info.onclick = () => {
+    info.onclick = (event) => {
       showInfo();
+      if (event.target.classList.contains("info")) {
+        info.onclick = () => {
+          document.querySelector(".info-container").innerText = "";
+        };
+      }
     };
   }
 

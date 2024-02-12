@@ -5,7 +5,6 @@ export default class Painting extends ArtPiece {
   constructor(data, callback) {
     super(data, callback);
     this.#style = data.style;
-    console.log(this.#style);
   }
 
   artInfo() {

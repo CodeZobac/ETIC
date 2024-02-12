@@ -11,9 +11,25 @@ html {
   background-color: #e8e8e8;
 }
 
+.header img {
+  position: absolute;
+  width: 100vw;
+  height: 15vh;
+  margin-top: -49.5vh;
+}
+
+.footer img {
+  position: absolute;
+  width: 100vw;
+  height: 15vh;
+  margin-top: 34vh;
+  margin-left: -100vw;
+}
+
 a {
   text-decoration: none;
 }
+
 p {
   font-family: "Protest Revolution", sans-serif;
   font-size: 1.5vw;
@@ -21,8 +37,8 @@ p {
 }
 
 #initial-text {
-  margin-top: 20vh;
-  margin-bottom: 30vh;
+  margin-top: 30vh;
+
   word-spacing: 10px;
 }
 
@@ -56,26 +72,25 @@ h2 {
 
 #left {
   display: inline-flex;
+  position: absolute;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4vw;
-  size: 100%;
-  display: inline-flex;
-  margin: 0 20vw;
-  margin-top: 7.35vh;
-  margin-bottom: 4vh;
+  cursor: pointer;
+  width: 5vw;
+
+  margin-left: -21vw;
+  margin-top: -12vh;
   transition: transform 0.3s ease;
 }
 #right {
   display: inline-flex;
+  position: absolute;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4vw;
-  size: 100%;
-  display: inline-flex;
-  margin: 0 22vw;
-  margin-top: 7.35vh;
-  margin-bottom: 4vh;
+  cursor: pointer;
+  width: 5vw;
+  margin-left: 18vw;
+  margin-top: -12vh;
   transition: transform 0.3s ease;
 }
 
@@ -83,6 +98,7 @@ h2 {
 #sculptures-button,
 #photos-button,
 #info {
+  position: relative;
   display: inline-flex;
   flex-direction: row;
   text-decoration: none;
@@ -94,9 +110,24 @@ h2 {
   transition: transform 0.3s ease;
   margin-inline: 2vw;
   justify-content: space-between;
-
+  margin-top: 8vh;
   gap: 1vw;
   cursor: pointer;
+}
+#sculptures-button {
+  margin-left: -1.5vw;
+}
+#photos-button {
+  padding-left: -1.5vw;
+}
+#info {
+  margin-left: 5vw;
+  margin-top: 2vh;
+}
+
+.info-container p {
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .menu-icon {
@@ -140,8 +171,18 @@ button:hover {
 }
 
 .item img {
-  max-height: 330px;
+  display: flex;
+  max-height: 400px;
   max-width: 600px;
-  margin-top: 1vh;
+
   margin-left: 1.5vw;
+}
+
+#hero-container img {
+  margin: 0, 0;
+  display: flex;
+
+  width: 100vw;
+  height: 50vh;
+  margin-bottom: -27vh;
 }

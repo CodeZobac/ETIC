@@ -5,25 +5,25 @@
     "year": "1505",
     "style": "Renaissance",
     "type-of-paint": "",
-    "image": "https://cdn.shopify.com/s/files/1/0047/4231/6066/files/mona_liza_800x.jpg",
+    "image": "media/paintings/mona_lisa.png",
     "artist": "Leonardo Da Vinci"
   },
   {
     "type": "painting",
-    "title": "The birth of Venus",
+    "title": "Starry Night",
     "year": "1486",
     "style": "",
     "type-of-paint": "",
-    "image": "https://cdn.shopify.com/s/files/1/0047/4231/6066/files/The_Birth_of_Venus_by_Sandro_Botticelli_800x.jpg",
-    "artist": "Sandro Botticelli"
+    "image": "media/paintings/starry_night.png",
+    "artist": "Van Gogh"
   },
   {
     "type": "painting",
-    "title": "The last supper",
+    "title": "The Scream",
     "year": "1498",
     "style": "",
     "type-of-paint": "",
-    "image": "https://cdn.shopify.com/s/files/1/0047/4231/6066/files/The_Last_Supper_by_Leonardo_da_Vinci_1495_1498_800x.jpg",
+    "image": "media/paintings/grito.png",
     "artist": "Leonardo Da Vinci"
   },
   {
@@ -32,7 +32,7 @@
     "year": "460 BC",
     "material": "Bronze",
     "dimension": "1.70 m",
-    "image": "https://www.artlex.com/wp-content/uploads/2023/09/Roman-Bronze-Copy-of-Myrons-Discobolus-635x1024.jpg",
+    "image": "media/sculptures/discobolus.png",
     "artist": "Myron"
   },
   {
@@ -41,7 +41,7 @@
     "year": "1919",
     "material": "Bronze",
     "dimension": "2 m",
-    "image": "https://www.artlex.com/wp-content/uploads/2023/05/The-Thinker-1880-683x1024.jpg",
+    "image": "media/sculptures/thinker.png",
     "artist": "Auguste Rodin"
   },
   {
@@ -50,7 +50,7 @@
     "year": "Between 27BC to 68AD",
     "material": "Marble",
     "dimension": "2.08 m",
-    "image": "https://www.artlex.com/wp-content/uploads/2023/09/Laocoon-and-His-Sons.jpg",
+    "image": "media/sculptures/laocoon.png",
     "artist": "Agesander, Polydoros, Athanadoros"
   },
   {
@@ -58,7 +58,7 @@
     "title": "The burning monk",
     "year": "June 11, 1963",
     "description": "",
-    "image": "https://photographyproject.uk/wp-content/uploads/2022/01/21-2103-post/ap_browne_07.jpg",
+    "image": "media/photos/monk.png",
     "artist": "Malcolm Brown"
   },
   {
@@ -66,7 +66,7 @@
     "title": "Raising the Flag at Iwo Jima",
     "year": "February 23, 1945",
     "description": "",
-    "image": "https://photographyproject.uk/wp-content/uploads/2022/01/23-2103-post/Raising_the_Flag_on_Iwo_Jima.jpg",
+    "image": "media/photos/flag.png",
     "artist": "Joe Rosenthal"
   },
   {
@@ -74,7 +74,7 @@
     "title": "Lunch a top of a skyscraper",
     "year": "1932",
     "description": "This image of workers taking a daredevil’s lunch break at the top of a skyscraper certainly makes the viewer dizzy but it also brings their attention to the very risky life the workers building the Rockefeller Center lead.",
-    "image": "https://www.zupimages.net/up/21/32/6l17.jpg",
+    "image": "media/photos/lunch.png",
     "artist": "Unknown"
   },
   {

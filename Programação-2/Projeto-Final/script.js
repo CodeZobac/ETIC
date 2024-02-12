@@ -27,11 +27,17 @@ window.onload = async () => {
     left.style.display = "inline-flex";
     right.style.display = "inline-flex";
     info.style.display = "block";
-
+    document.querySelector("#hero-container").innerHTML = "";
     gallery.showSlide("photo");
 
     const h2 = document.querySelector("h2");
     h2.innerText = "Photos Gallery";
+    document.querySelector("gallery-view").onmouseover = () => {
+      h2.innerHTML = "";
+    };
+    document.querySelector("gallery-view").onmouseout = () => {
+      h2.innerHTML = "Photos Gallery";
+    };
   };
 
   document.querySelector("#sculptures-button").onclick = () => {
@@ -45,6 +51,13 @@ window.onload = async () => {
 
     const h2 = document.querySelector("h2");
     h2.innerText = "Sculptures Gallery";
+    document.querySelector("#gallery-view").onmouseover = () => {
+      h2.innerHTML = "";
+    };
+    document.querySelector("#gallery-view").onmouseout = () => {
+      h2.innerHTML = "Sculptures Gallery";
+    };
+    document.querySelector("#hero-container").innerHTML = "";
   };
 
   document.querySelector("#paintings-button").onclick = () => {
@@ -58,10 +71,16 @@ window.onload = async () => {
 
     const h2 = document.querySelector("h2");
     h2.innerText = "Paintings Gallery";
+    document.querySelectorAll("#gallery-view").onmouseover = () => {
+      h2.innerHTML = "";
+    };
+    document.querySelector("#hero-container").innerHTML = "";
+  };
+  document.querySelectorAll("gallery-view").onmouseout = () => {
+    h2.innerHTML = "Paintings Gallery";
   };
 
-  const view = document.querySelector("#gallery-view");
-  view.innerHTML = "";
+  document.querySelector("#gallery-view").innerHTML = "";
 };
 
 const getJson = async () => {
