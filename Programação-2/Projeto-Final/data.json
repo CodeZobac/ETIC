@@ -11,20 +11,20 @@
   {
     "type": "painting",
     "title": "Starry Night",
-    "year": "1486",
-    "style": "",
-    "type-of-paint": "",
+    "year": "1889",
+    "style": "post-impressionist",
+    "type-of-paint": "oil paint on canvas",
     "image": "media/paintings/starry_night.png",
     "artist": "Van Gogh"
   },
   {
     "type": "painting",
     "title": "The Scream",
-    "year": "1498",
-    "style": "",
-    "type-of-paint": "",
+    "year": "1893",
+    "style": "proto-expressionist",
+    "type-of-paint": "Oil, tempera, pastel and crayon on cardboard",
     "image": "media/paintings/grito.png",
-    "artist": "Leonardo Da Vinci"
+    "artist": "Edvard Munch"
   },
   {
     "type": "sculpture",
@@ -57,7 +57,7 @@
     "type": "photo",
     "title": "The burning monk",
     "year": "June 11, 1963",
-    "description": "",
+    "description": "One of the monks sat down in the street, and fellow monks covered him in nearly five gallons of fuel. Moments later, Thich Quang Duc struck a match and set himself ablaze.",
     "image": "media/photos/monk.png",
     "artist": "Malcolm Brown"
   },
@@ -65,7 +65,7 @@
     "type": "photo",
     "title": "Raising the Flag at Iwo Jima",
     "year": "February 23, 1945",
-    "description": "",
+    "description": "Raising the Flag on Iwo Jima is an iconic photograph of six United States Marines raising the U.S. flag atop Mount Suribachi during the Battle of Iwo Jima in the final stages of the Pacific War.",
     "image": "media/photos/flag.png",
     "artist": "Joe Rosenthal"
   },

@@ -15,7 +15,6 @@ export default class Gallery {
 
   showSlide(type) {
     const arr = this.artPieces.filter((item) => item.type === type);
-    console.log(arr);
 
     const container = document.querySelector("#gallery-view");
     container.innerHTML = "";
@@ -38,6 +37,7 @@ export default class Gallery {
       slides[currentIndex].style.display = "none";
       currentIndex = (index + slides.length) % slides.length;
       slides[currentIndex].style.display = "block";
+      this.#callback(arr[currentIndex]);
     };
 
     const showInfo = () => {
@@ -64,13 +64,8 @@ export default class Gallery {
     };
 
     const info = document.querySelector("#info");
-    info.onclick = (event) => {
+    info.onclick = () => {
       showInfo();
-      if (event.target.classList.contains("info")) {
-        info.onclick = () => {
-          document.querySelector(".info-container").innerText = "";
-        };
-      }
     };
   }
 

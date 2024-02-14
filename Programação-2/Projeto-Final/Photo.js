@@ -1,13 +1,13 @@
 import ArtPiece from "./ArtPiece.js";
 
 export default class Photo extends ArtPiece {
-  #year;
+  #description;
   constructor(data, callback) {
     super(data, callback);
-    this.#year = data.year;
+    this.#description = data.description;
   }
-  showInfo(data) {
-    let parentInfo = super.showInfo();
-    return parentInfo + "";
+  artInfo(data) {
+    let parentInfo = super.artInfo();
+    return parentInfo + "with the description" + this.#description;
   }
 }

@@ -8,22 +8,27 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e8e8e8;
+  background-color: beige;
+  z-index: -500;
 }
 
 .header img {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 15vh;
   margin-top: -49.5vh;
+  pointer-events: none;
+  z-index: -450;
 }
 
 .footer img {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 15vh;
   margin-top: 34vh;
   margin-left: -100vw;
+  pointer-events: none;
+  z-index: -450;
 }
 
 a {
@@ -34,6 +39,7 @@ p {
   font-family: "Protest Revolution", sans-serif;
   font-size: 1.5vw;
   font-weight: bold;
+  z-index: -449;
 }
 
 #initial-text {
@@ -56,6 +62,7 @@ h1 {
   font-size: 3vw;
   color: #333;
   text-align: center;
+  z-index: -400;
 }
 
 h2 {
@@ -102,7 +109,7 @@ h2 {
   display: inline-flex;
   flex-direction: row;
   text-decoration: none;
-  background: #e8e8e8;
+  background: beige;
   border-radius: 2vw;
   font-family: "Honk", sans-serif;
   font-size: 2vw;
@@ -114,9 +121,7 @@ h2 {
   gap: 1vw;
   cursor: pointer;
 }
-#sculptures-button {
-  margin-left: -1.5vw;
-}
+
 #photos-button {
   padding-left: -1.5vw;
 }
@@ -128,6 +133,7 @@ h2 {
 .info-container p {
   margin-left: 10vw;
   margin-right: 10vw;
+  color: #333;
 }
 
 .menu-icon {
@@ -164,9 +170,14 @@ h2 {
 button:hover {
   transform: scale(1.1);
 }
-
+#left:hover {
+  transform: scale(1.1);
+}
+#right:hover {
+  transform: scale(1.1);
+}
 .item:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
   transition: transform 0.5s ease-in-out;
 }
 

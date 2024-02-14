@@ -29,7 +29,6 @@ window.onload = async () => {
     info.style.display = "block";
     document.querySelector("#hero-container").innerHTML = "";
     gallery.showSlide("photo");
-
     const h2 = document.querySelector("h2");
     h2.innerText = "Photos Gallery";
     document.querySelector("gallery-view").onmouseover = () => {
