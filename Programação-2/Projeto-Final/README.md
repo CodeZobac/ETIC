@@ -7,7 +7,6 @@ This Art Gallery Website is a dynamic web platform designed to showcase various 
 
 - **Dynamic Art Galleries**: Display art pieces categorized into paintings, sculptures, and photographs.
 - **Interactive UI**: Users can interact with the galleries, viewing details of each art piece, including artist, year, title, and type.
-- **Responsive Design**: The website layout adjusts to different screen sizes, ensuring a seamless experience across devices.
 
 ## Technologies Used
 
