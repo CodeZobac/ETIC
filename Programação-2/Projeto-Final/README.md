@@ -1,4 +1,4 @@
-# Art Gallery Website
+# CodeZobac | Art Gallery
 
 ## Overview
 This Art Gallery Website is a dynamic web platform designed to showcase various art pieces, including paintings, sculptures, and photographs. It allows users to explore different art forms through a user-friendly interface.
