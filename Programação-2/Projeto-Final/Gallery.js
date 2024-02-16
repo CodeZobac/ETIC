@@ -99,16 +99,4 @@ export default class Gallery {
     this.#currentArt.active = true;
     this.#callback(artPiece);
   }
-
-  // createButton() {
-  //   const container = document.querySelector("#gallery-view");
-  //   const left = document.createElement("button");
-  //   const right = document.createElement("button");
-  //   left.id = "left";
-  //   right.id = "right";
-  //   left.innerText = "Previous";
-  //   right.innerText = "Next";
-  //   right.appendChild(container);
-  //   right.appendChild(container);
-  // }
 }
