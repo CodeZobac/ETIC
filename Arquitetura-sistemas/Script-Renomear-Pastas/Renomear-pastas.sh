@@ -9,13 +9,13 @@ else
     prefix="$1"
 fi
 
+dirs=./script-sample-folder/*
+
 # Iterate over directories in script_sample_folder
-for dir in script_sample_folder/*; do
+for dir in $dirs; do
+    echo "$dir"
     if [ -d "$dir" ]; then
-        # Get the current directory name
         dir_name=$(basename "$dir")
-        
-        # Rename the directory
         new_name="${prefix}-${dir_name}"
         mv "$dir" "$new_name"
         
