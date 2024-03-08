@@ -1,6 +1,5 @@
 #!/bin/bash
-#Description: This script renames all directories in the script_sample_folder
-
+# Description: This script renames all directories in the script-sample-folder
 
 # Check if prefix argument is provided
 if [ $# -eq 0 ]; then
