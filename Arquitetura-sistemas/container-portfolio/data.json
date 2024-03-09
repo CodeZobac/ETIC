@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Carrousel-1",
+    "image": "./Images/Carrousel/01.jpg"
+  },
+  {
+    "name": "Carrousel-2",
+    "image": "./Images/Carrousel/02.jpg"
+  },
+  {
+    "name": "Carrousel-3",
+    "image": "./Images/Carrousel/03.jpg"
+  },
+  {
+    "name": "Carrousel-4",
+    "image": "./Images/Carrousel/04.jpg"
+  },
+  {
+    "name": "Carrousel-5",
+    "image": "./Images/Carrousel/05.jpg"
+  }
+]
