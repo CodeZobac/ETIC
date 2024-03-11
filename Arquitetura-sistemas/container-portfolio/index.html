@@ -11,11 +11,26 @@
     <header id="navbar">
       <a href="#landing-page"><img id="logo" /></a>
       <div id="menu">
-        <a style="cursor: pointer" onclick='myScroll("about", 210)'>About</a>
-        <a style="cursor: pointer" href="#portfolio"> Projects</a>
-        <a style="cursor: pointer" onclick="myScroll('contact', 210)"
-          >Contact</a
+        <a
+          class="about"
+          style="cursor: pointer"
+          onclick='myScroll("about", 210)'
         >
+          About
+        </a>
+        <a
+          class="projects"
+          style="cursor: pointer"
+          onclick="myScroll('portfolio', 210)"
+        >
+          Projects
+        </a>
+        <a
+          class="contact"
+          style="cursor: pointer"
+          onclick="myScroll('contact-container', 210)"
+          >Contact
+        </a>
       </div>
     </header>
     <section id="landing-page">
@@ -84,42 +99,67 @@
             </div>
             <br />
             <p>Check out my projects:</p>
-            <gallery>
+            <div id="container">
               <div id="image-container"></div>
-              <button id="left">previous</button><button id="right">next</button
-              ><button id="info">info</button>
-            </gallery>
+              <div id="buttons">
+                <button id="left">Previous</button>
+                <!-- <button id="info">Info</button> -->
+                <button id="right">Next</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section id="contact">
-        <h1>Contact</h1>
-        <img id="background-h1-3" src="Images/Group 36.png" />
-        <div>
-          <p>Name</p>
-          <input />
-        </div>
-        <div>
-          <p>Email</p>
-          <input />
-        </div>
-        <div>
-          <label for="message" style="display: grid; padding-bottom: 1vw"
-            >Message</label
-          >
+
+      <section id="contact-container">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-left"
+        >
+          <div class="contact-left-title">
+            <h2>Get in touch</h2>
+            <hr />
+          </div>
+          <input
+            type="hidden"
+            name="access_key"
+            value="13d31de0-9032-4f91-903a-6ef4d0fcf6df"
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="contact-inputs"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="contact-inputs"
+            required
+          />
           <textarea
-            style="width: 40vw; height: 8vw"
-            id="message"
-            style="height: 6vw"
+            name="message"
+            placeholder="Your Message"
+            class="contact-inputs"
           ></textarea>
-        </div>
-        <button id="send">Send</button>
+          <button type="submit">
+            Send <img src="Images/arrow_icon.png" />
+          </button>
+        </form>
+        <!-- <div class="contact-right"><img src="assets/right_img.png" /></div> -->
       </section>
     </main>
     <footer>
       <div id="contact-footer">
-        <a><img src="Images/Tech Stack/github.png" /></a>
-        <a><img src="Images/Tech Stack/linkedin.png" /></a>
+        <a href="https://github.com/CodeZobac" target="_blank">
+          <img src="Images/Tech Stack/github.png" />
+        </a>
+        <a href="https://www.linkedin.com/in/afonsocaboz/" target="_blank">
+          <img src="Images/Tech Stack/linkedin.png" />
+        </a>
       </div>
       <p>Copyright © 2024. All rights are reserved</p>
       <img id="footer-image" src="Images/Vector.png" />

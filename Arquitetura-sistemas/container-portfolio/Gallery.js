@@ -1,15 +1,26 @@
 import Portfolio from "./Portfolio.js";
 
+/**
+ * Represents a gallery of images.
+ */
 export default class Gallery {
   #callback;
   #currentSlide = null;
   view;
   images = [];
+
+  /**
+   * Creates a new Gallery instance.
+   * @param {Function} callback - The callback function to be called when a slide is shown.
+   */
   constructor(callback) {
     this.#callback = callback;
     this.view = document.querySelector("#image-container");
   }
 
+  /**
+   * Shows the slides in the gallery.
+   */
   showSlide() {
     const arr = this.images;
 
@@ -30,6 +41,10 @@ export default class Gallery {
       slides[currentIndex].style.display = "block";
     }
 
+    /**
+     * Shows the slide at the specified index.
+     * @param {number} index - The index of the slide to show.
+     */
     const showSlide = (index) => {
       slides[currentIndex].style.display = "none";
       currentIndex = (index + slides.length) % slides.length;
@@ -46,16 +61,18 @@ export default class Gallery {
       showSlide(currentIndex + 1);
     };
 
-    const info = document.querySelector("#info");
-    info.onclick = () => {
-      showInfo();
-    };
-
+    /**
+     * Shows the info.
+     */
     const showInfo = () => {
       console.log("showInfo");
     };
   }
 
+  /**
+   * Adds an image to the gallery.
+   * @param {Image} Image - The image to add.
+   */
   addArt(Image) {
     let nextArt = null;
     nextArt = new Portfolio(Image, () => {
@@ -68,6 +85,10 @@ export default class Gallery {
     }
   }
 
+  /**
+   * Performs the art.
+   * @param {Image} images - The image to perform.
+   */
   #performArt(images) {
     if (this.#currentSlide) {
       this.#currentSlide.active = false;
