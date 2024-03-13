@@ -30,6 +30,8 @@ html {
 
 #logo {
   margin-top: 2vw;
+  position: absolute;
+  margin-top: -5vh;
   margin-left: 12vw;
   background-image: url(Images/Logo\ 1.png);
   background-position: center;
@@ -277,7 +279,7 @@ html {
   cursor: pointer;
   justify-content: center;
   gap: 10px;
-  background-color: #01372b;
+  background-color: #50896c;
   font-family: Chewy;
   color: #fef6d2;
   letter-spacing: 4px;
@@ -345,7 +347,7 @@ footer div {
 
 #left {
   display: inline-flex;
-  position: fixed;
+
   flex-direction: row;
   padding: 8px 16px;
   justify-content: center;
@@ -359,12 +361,11 @@ footer div {
   font-size: 18px;
   letter-spacing: 4px;
   margin-left: 36vw;
-  margin-top: -20vh;
 }
 
 #right {
   display: inline-flex;
-  position: fixed;
+  position: absolute;
   flex-direction: row;
   padding: 8px 16px;
   justify-content: center;
@@ -377,9 +378,28 @@ footer div {
   color: #01372b;
   font-size: 18px;
   letter-spacing: 4px;
-  margin-left: 62vw;
-  margin-top: -20vh;
+  margin-left: 19vw;
   width: 8vw;
+}
+
+#left:hover {
+  background-color: #50896c;
+  color: #c9d1a3;
+}
+
+#left:active {
+  background-color: #01372b;
+  color: #c9d1a3;
+}
+
+#right:hover {
+  background-color: #50896c;
+  color: #c9d1a3;
+}
+
+#right:active {
+  background-color: #01372b;
+  color: #c9d1a3;
 }
 
 #info {
@@ -400,26 +420,6 @@ footer div {
   margin-left: 50vw;
   margin-top: 2vh;
 }
-
-.about,
-.hover hr {
-  width: 70px;
-  height: 5px;
-  border-radius: 20px;
-  background-color: #01372b;
-  border: none;
-  margin-bottom: 1.4vh;
-}
-
-/* .hover {
-  position: absolute;
-  width: 70px;
-  height: 5px;
-  border-radius: 20px;
-  background-color: #01372b;
-
-  margin-top: -10vh;
-} */
 
 @media (max-width: 488px) {
   #main-image {
