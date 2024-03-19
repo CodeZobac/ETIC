@@ -82,10 +82,3 @@ const getJson = async () => {
   const result = await request.json();
   return result;
 };
-
-const about = () => {
-  const a = document.querySelector(".about");
-  const hr = document.createElement("hr");
-  a.appendChild(hr);
-  a.className = "hover";
-};

@@ -1,30 +1,14 @@
-# # This Dockerfile is used to build a container for a Node.js web application.
+FROM node:18-alpine
 
-# # Use the official Node.js 18 Alpine image as the base image
-# FROM node:18-alpine
+WORKDIR /PortfolioWebpage
 
-# # Set the working directory inside the container
-# WORKDIR /PortfolioWebpage
+COPY . .
 
-# # Copy all files from the current directory to the working directory inside the container
-# COPY . .
+RUN yarn global add http-server
 
-# # Install http-server globally using yarn package manager
-# RUN yarn global add http-server
+CMD ["http-server", ".", "-p", "3000"]
 
-# # Set the command to run when the container starts
-# CMD ["http-server", ".", "-p", "3000"]
-
-# # Expose port 3000 to allow incoming connections to the container
-# EXPOSE 3000
-
-
-FROM nginx:1.25.4
-
-COPY . /usr/share/nginx/html
-
-EXPOSE 80
-
+EXPOSE 3000
 
 
 

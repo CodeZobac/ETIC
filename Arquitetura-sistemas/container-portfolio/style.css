@@ -421,6 +421,14 @@ footer div {
   margin-top: 2vh;
 }
 
+#linkedin:hover {
+  transform: scale(1.3);
+}
+
+#github:hover {
+  transform: scale(1.3);
+}
+
 @media (max-width: 488px) {
   #main-image {
     background-image: url(Images/background-mobile.png);

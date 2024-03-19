@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="main.js"></script>
+    <link rel="icon" href="Images/Logo.png" type="image/png" />
   </head>
   <body>
     <header id="navbar">
@@ -158,17 +159,20 @@
     </main>
     <footer>
       <div id="contact-footer">
-        <a href="https://github.com/CodeZobac" target="_blank">
+        <a id="github" href="https://github.com/CodeZobac" target="_blank">
           <img src="Images/Tech Stack/github.png" />
         </a>
-        <a href="https://www.linkedin.com/in/afonsocaboz/" target="_blank">
+        <a
+          id="linkedin"
+          href="https://www.linkedin.com/in/afonsocaboz/"
+          target="_blank"
+        >
           <img src="Images/Tech Stack/linkedin.png" />
         </a>
       </div>
       <p>Copyright © 2024. All rights are reserved</p>
       <img id="footer-image" src="Images/Vector.png" />
     </footer>
-    <script src="main.js"></script>
     <script>
       function myScroll(id, difference = 0) {
         const element = document.getElementById(id);
@@ -177,6 +181,5 @@
         window.scrollTo(0, top - difference);
       }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
 </html>

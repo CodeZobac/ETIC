@@ -2,7 +2,7 @@
 
 
 
-folder_path="/home/afonso/ETIC/Arquitetura-sistemas/Script-Apagar_Diretorios/script-sample-folder"
+folder_path="./Script-Apagar_Diretorios/script-sample-folder"
 
 
 if [ ! -d "$folder_path" ]; then
