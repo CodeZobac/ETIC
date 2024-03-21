@@ -9,7 +9,7 @@ class Circle:
         radius (float): The radius of the circle.
     """
 
-    def __init__(self, radius):
+    def __init__(self, radius: int):
         self.radius = radius
 
     def area(self):
