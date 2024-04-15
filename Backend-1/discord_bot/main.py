@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import env
 
 
 # intents = discord.Intents.default()
@@ -23,4 +24,4 @@ async def ping(ctx):
 
 
 if __name__ == "__main__":
-    client.run("MTIyNDc5MTkxMTM4MzE3NTIyOA.GGUGhr.mObvZ3uy12C8zl8RstWOhvtK2_BY2gG_TFlk_0")
+    client.run(env.BOT)
