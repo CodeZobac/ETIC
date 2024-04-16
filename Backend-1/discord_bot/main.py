@@ -20,8 +20,6 @@ async def ping(ctx):
     await ctx.send(f"Pong! {round(client.latency * 1000)}ms")
 
 
-# client.run("MTIyNDc5MTkxMTM4MzE3NTIyOA.GGUGhr.mObvZ3uy12C8zl8RstWOhvtK2_BY2gG_TFlk_0")
-
 
 if __name__ == "__main__":
     client.run(env.BOT)
