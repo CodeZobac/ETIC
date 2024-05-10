@@ -1,0 +1,54 @@
+:root {
+  --font-family: system-ui, sans-serif;
+  --color-primary: #;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: 2rem;
+  margin-top: 2vh;
+}
+
+button {
+  border: none;
+  background-color: antiquewhite;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  max-height: 300px;
+  margin-left: 47vw;
+  margin-top: 30vh;
+  cursor: pointer;
+  animation: pulse 1s infinite alternate;
+}
+#previous {
+  transform: rotate(180deg);
+  margin-left: 42vw;
+  margin-top: 30vh;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
