@@ -1,18 +1,55 @@
 const template = document.createElement("template");
 template.innerHTML = `
     <style>
-        .gallery{
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-            background-color: pink;
+        /*ELEMENTS*/
+        * {
+            font-family: system-ui, sans-serif;
         }
-        .gallery img{
-            width: 100%;
-            height: auto;
+
+        button {
+            border: none;
+            color: white;
+            cursor: pointer;
+            background-color: transparent;
+            padding: 10px 20px;
+        }
+
+        /*CLASSES*/
+        .gallery {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 500px;
+            height: 500px;
+        }
+        
+        /*IDS*/
+        #images-container {
+            display: flex;
+            flex: 1;
+            background-color: red;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #play-pause {
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
     </style>
-    <div class="gallery><span>This is the gallery</span></div>
+    <div class="gallery">
+        <div id="images-container"></div>
+        <div id="controls">
+            <button id="prev">Anterior</button>
+            <button id="next">Próxima</button>
+        </div>
+        <button id="play-pause">STOP</button>
+    </div>
     `;
 
 class WebGallery extends HTMLElement {
@@ -23,7 +60,7 @@ class WebGallery extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
-  addTemplate(template){
+  addTemplate(template) {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
@@ -33,9 +70,4 @@ class WebGallery extends HTMLElement {
 }
 customElements.define("web-gallery", WebGallery);
 
-
-window.onload = () => {
-    const webGallery = document.querySelector("web-gallery");
-    const template = document.createElement("template");
-    webGallery.addTemplate(template);   
-}
+window.onload = () => {};
