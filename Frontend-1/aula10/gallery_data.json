@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Mountain Landscape",
+    "description": "A majestic mountain range bathed in the golden light of sunset.",
+    "imageUrl": "https://pixabay.com/get/ge7c760663195c01884d118e38f9577c6a3b26d2964d43c6a08b78b6b5e463e7981792aec4024df6a41a5550364f1c681b81ee1bccb0dbcb73284bec52accd06dd59e1e0d5161990dd4c68c5810bc7d0d_640.jpg"
+  },
+  {
+    "title": "Crystal Clear Lake",
+    "description": "A serene lake reflecting the clear blue sky and fluffy white clouds.",
+    "imageUrl": "https://pixabay.com/get/g552a2f66df82bbba071c9febf5b5f754c2b2e4da14dd21b28fdb3f6a2daba31afb9eaca305459d4f8f120d36b5444e9240d939a1ccb518816acf776c33faece1d65ab2137d69307b2ea80c92fc169176_640.jpg"
+  },
+  {
+    "title": "Vibrant Cityscape",
+    "description": "A bustling cityscape with towering skyscrapers and colorful lights.",
+    "imageUrl": "https://pixabay.com/get/g87ebac3d4bc1a68ddf30cf671e44cb9a20de255afd07b79a39f5b3085ba6bed87484d70b12f61459aff1bf7032b2f4722d4c6a3d977d1a4fd9234ccce2a333d7828f076cf0f239fe11ac025d87bbdc9f_640.jpg"
+  },
+  {
+    "title": "Cozy Cabin",
+    "description": "A charming cabin nestled amongst the trees, perfect for a winter getaway.",
+    "imageUrl": "https://pixabay.com/get/g0626f27634bd091784c093584f95264eb27db8d38b8a9f8d455ab5850ce29eef938504564fae3ef722ad1a2a7e727212cb699142ab3244c9a341a194e5579ec8c0dec9a8a99de0f667c165d9ec92aa59_640.jpg"
+  },
+  {
+    "title": "Tropical Beach",
+    "description": "A pristine beach with white sand, turquoise water, and swaying palm trees.",
+    "imageUrl": "https://pixabay.com/get/gd553922708da0d6b20c1e605d654dccb96ca17e67d094a462c1405095b0c747a5167b12df0048ce2de4cb15516fdaba2e2a280c6d4f3ec45ba6ef9609665b99aabc097c3d696d29164aa54e52098b0c6_640.jpg"
+  },
+  {
+    "title": "Starry Night Sky",
+    "description": "A breathtaking night sky filled with millions of twinkling stars.",
+    "imageUrl": "https://pixabay.com/get/gf3d9f97548568fb7d801b6169dbdb1e6be4eb8e2e680abd29a35b7744ff4c2e8573020bda6aa8e67f12af99c7a5b0c1c92672bb57cf6a9afec98d2dfbd0263ed025e97ea333a19c2ac97d0702ab3d7a0_640.jpg"
+  },
+  {
+    "title": "Ancient Ruins",
+    "description": "Mysterious ruins of an ancient civilization, shrouded in history and mystery.",
+    "imageUrl": "https://pixabay.com/get/gc0e209d1c42b6b0332c5f1f0f1cba4d07675e36b09ccbd890695751b202b9c548415953164dc9a484c2e6e7fb7a189b657bf0f9024a5aee2acc09a72f044f01b749a50fe096e50c40443bc65c32919d5_640.jpg"
+  },
+  {
+    "title": "Blooming Flowers",
+    "description": "A field of vibrant flowers in full bloom, creating a tapestry of color.",
+    "imageUrl": "https://pixabay.com/get/g68e2f0fd479625005f283ea0591ccbef91d2d704ba449ed18377b6159a2f5f8a5c7e36967b21f9d42aaf65eda1728949c479756f061645f10800fc8a0909e59e16e2d986b6d7d244ab254eef2aa92ad8_640.jpg"
+  },
+  {
+    "title": "Waterfall Cascade",
+    "description": "A powerful waterfall cascading down a steep cliff, surrounded by lush greenery.",
+    "imageUrl": "https://pixabay.com/get/g7b5f97bdeb9b695445d8f8368e6afcfd8e34789ddb590265f86cee9a95f9944e05ee7b698bd64a19e6c1e86341d48a702050f3f93ba6460df74df76cd763d113762a780546da1162154861b546c5e214_640.jpg"
+  },
+  {
+    "title": "Desert Landscape",
+    "description": "A vast and arid desert landscape with towering dunes and a vibrant sunset.",
+    "imageUrl": "https://pixabay.com/get/g9bda45390031e1d0aff77bd6915743c76f69f74c474b31e9c462dd01498f35bdd898af70ebb2d0abc5c361fa8d6b5fafba8844e7fca0598d7f68289f8025440a427546fcc17ca26d10c49251fe396d1a_640.jpg"
+  }
+]
