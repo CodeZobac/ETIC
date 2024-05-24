@@ -5,4 +5,10 @@
   --color-tertiary: #89bd54;
   --color-text-dark: #444444;
   --color-text-light: #eeeeee;
+
+  --h-padding: 20px;
+  --v-padding: 20px;
+  --gap: 20px;
+
+  --speed: 0.5s;
 }
