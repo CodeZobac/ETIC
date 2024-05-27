@@ -473,3 +473,99 @@ class CheckItem extends Item {
 }
 
 customElements.define("check-item", CheckItem);
+
+//TODO Model
+
+const TodoModalTemplate = document.createElement("template");
+TodoModalTemplate.innerHTML = `
+<style>
+#container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-secondary);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#container div {
+  width: 400px;
+  height: 400px;
+  background-color: var(--color-secondary);
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.icons svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+</style>
+<div id="container">
+  <h1>Add task</h1>
+  <input type="text" placeholder="Item name" />
+  <div class="icons">
+    <svg
+    id="cross"
+    width="100%"
+    height="100%"
+    version="1.1"
+    viewBox="0 0 24.342 24.342">
+      <path
+      d="m12.171 8.4754-8.4754-8.4754-3.6954 3.6954 8.4754 8.4754-8.4754 8.4754 3.6954 3.6954 8.4754-8.4754 8.4754 8.4754 3.6954-3.6954-8.4754-8.4754 8.4754-8.4754-3.6954-3.6954z"/>
+    </svg>
+    <svg
+    id="check"
+    width="100%"
+    height="100%"
+    version="1.1"
+    viewBox="0 0 24.342 24.342">
+      <path d="m20.497 2.6458 3.8447 3.865-15.105 15.185-9.2366-9.2856 3.8447-3.865 5.3919 5.4205z"/>
+    </svg>
+  </div>
+</div>
+`;
+
+class TodoModal extends HTMLElement {
+  shadowRoot;
+  constructor() {
+    super();
+    this.shadowRoot = this.attachShadow({ mode: "closed" });
+    this.shadowRoot.append(TodoModalTemplate.content.cloneNode(true));
+  }
+
+  connectedCallback() {
+    this.shadowRoot.querySelector("#cross").onclick = () =>
+      this.dispatchEvent(new CustomEvent("closed"));
+
+    this.shadowRoot.querySelector("#check").onclick = () => {
+      const input = this.shadowRoot.querySelector("input");
+      this.dispatchEvent(new CustomEvent("added", { detail: input.value }));
+      input.value = "";
+    };
+  }
+
+  show() {
+    this.shadowRoot.querySelector("#container").style.display = "initial";
+  }
+
+  hide() {
+    this.shadowRoot.querySelector("#container").style.display = "none";
+  }
+  
+//Setters and Getters
+  get value() {
+    return this.shadowRoot.querySelector("input").value;
+  }
+
+  set value(value) {
+    this.shadowRoot.querySelector("input").value = value;
+  }
+}
+
+customElements.define("todo-modal", TodoModal);

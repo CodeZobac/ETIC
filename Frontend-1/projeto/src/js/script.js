@@ -60,5 +60,7 @@ window.onload = async () => {
     });
   };
 
+  const todo = new TodoModal();
+
   buildTasksList(model.getTasks());
 };
