@@ -1,6 +1,6 @@
 Sure, here is the entire `README.md` content in markdown format:
 
-```markdown
+
 # TODOs - Progressive Web Application (PWA)
 
 ## Overview
@@ -14,59 +14,40 @@ TODOs is a Progressive Web Application (PWA) that allows users to manage tasks e
 - Responsive design.
 - Intuitive user interface with custom web components.
 
-## Project Structure
-```
-
-|-- index.html
-|-- manifest.json
-|-- script.js
-|-- serviceWorker.js
-|-- style.css
-|-- system.css
-|-- TodoModel.js
-|-- webComponents.js
-|-- images
-| |-- icon.svg
-| |-- icon-192.svg
-| |-- icon-512.svg
-| |-- screenshot1.png
-| |-- screenshot2.png
-
-````
 
 ## Files Description
 
-### index.html
+## index.html
 The main HTML file that sets up the structure of the application.
 
-### manifest.json
+## manifest.json
 The web app manifest file that provides metadata for the PWA. It includes information like name, icons, start URL, and theme color.
 
-### script.js
+## script.js
 The main JavaScript file that initializes the application, registers the service worker, and manages the interaction between the user interface and the `TodoModel`.
 
-### serviceWorker.js
+## serviceWorker.js
 A service worker script that caches essential files for offline access and handles fetch requests.
 
-### style.css
+## style.css
 The main stylesheet for the application, which includes general styles and imports `system.css` for variables.
 
-### system.css
+## system.css
 A CSS file that defines global variables for colors, padding, margins, and transitions.
 
-### TodoModel.js
+## TodoModel.js
 A JavaScript module that manages the tasks and items, handles local storage operations, and provides methods to manipulate tasks and items.
 
-### webComponents.js
+## webComponents.js
 A JavaScript file that defines custom web components (`todo-header`, `task-item`, `check-item`, and `todo-dialog`) used in the application.
 
 ## Installation
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/todos-pwa.git
+   git clone https://github.com/CodeZobac/ETIC/Frontend-1.git
    cd todos-pwa
-````
+``
 
 2. Open `index.html` in a web browser.
 
