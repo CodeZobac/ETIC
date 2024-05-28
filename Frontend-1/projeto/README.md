@@ -1,6 +1,3 @@
-Sure, here is the entire `README.md` content in markdown format:
-
-
 # TODOs - Progressive Web Application (PWA)
 
 ## Overview
@@ -110,8 +107,3 @@ A custom element representing a dialog box for adding tasks or items.
 ## License
 
 This project is licensed under the MIT License.
-
-```
-
-Feel free to copy and paste the above markdown content into your `README.md` file.
-```
