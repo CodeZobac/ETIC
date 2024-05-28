@@ -50,7 +50,7 @@ headerTemplate.innerHTML = `
 
 <header>
 
-<h1>TODOs</h1>
+<h1>TODOs = () => { </h1>
 <p>Task name</p>
 <div class="icon">
     <svg width="100%" height="100%" viewBox="0 0 24.342 24.342" fill="var(--color-text-light)">
@@ -559,6 +559,7 @@ todoDialogTemplate.innerHTML = `
             <svg width="100%" height="100%" viewBox="0 0 24.342 24.342" fill="var(--color-text-light)">
                 <path d="m20.497 2.6458 3.8447 3.865-15.105 15.185-9.2366-9.2856 3.8447-3.865 5.3919 5.4205z"/>
             </svg>
+            
         </button>
     </div>
 </div>      
