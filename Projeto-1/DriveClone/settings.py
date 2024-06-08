@@ -33,6 +33,15 @@ LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "mainapp:home"
 LOGOUT_REDIRECT_URL = "login"
 
+#Email settings
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+#Auth settings
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend", #Username and password
+    "accounts.authentication.EmailAuthBackend",  #Email and password
+
+]
 
 # Application definition
 
@@ -45,6 +54,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "mainapp.apps.MainappConfig",
+    "easy_thumbnails",
 ]
 
 MIDDLEWARE = [

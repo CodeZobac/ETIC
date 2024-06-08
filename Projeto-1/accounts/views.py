@@ -1,7 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
-from .forms import LoginForm, UserRegistration
+from .models import Profile
+from .forms import LoginForm, UserRegistration, UserEditForm, ProfileEditForm
+from django.forms.models import model_to_dict
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 def user_login(request):
     if request.method == "POST":
@@ -34,3 +38,25 @@ def register(request):
     else:
         form = UserRegistration()
     return render(request, 'registration/register.html', {"user_form": form})
+
+def profile(request):
+    profile = get_object_or_404(Profile, user__username=request.user)
+    user = get_object_or_404(User, username=request.user)
+    if request.method == "POST":
+        user_form = UserEditForm(instance=request.user, data=request.POST)
+        profile_form = ProfileEditForm(instance=request.user.profile, data=request.POST, files=request.FILES)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, "Profile updated successfully")
+            profile = get_object_or_404(Profile, user__username=request.user)
+        else:
+            messages.error(request, "Error updating your profile")
+    else:
+        user_form = UserEditForm(initial=model_to_dict(user))
+        profile_form = ProfileEditForm(initial=model_to_dict(profile))
+    return render(request, "profile.html", {
+        "profile": profile,
+        "user_form": user_form,
+        "profile_form": profile_form
+        })

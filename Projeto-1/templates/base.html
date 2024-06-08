@@ -7,7 +7,8 @@
   </head>
   <body>
     {% if request.user.is_authenticated %}
-    <p>Logged in as: {{ user.username }}</p>  
+    <a href="{% url 'accounts:profile' %}">Logged in as: {{request.user}}</a>
+    
     <form method="post" action="{% url 'logout' %}"> 
       {% csrf_token %} 
       <button id="logout-button" type="submit">Logout</button>
