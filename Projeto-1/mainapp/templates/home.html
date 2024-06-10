@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-  Protected HTML file
+    <br>
+    <h2>Home</h2>
+    <p>Welcome to the home page.</p>
+    <p>Here you can create a new folder or upload a file.</p>
+    <p>Click on the links below to navigate to the respective pages.</p>
+    <ul>
+        <li><a href="{% url 'mainapp:create_new_folder' %}">Create New Folder</a></li>
+    </ul>
+    <br>
+    {% for folder in folders  %}
+        <a href="{% url "mainapp:open_folder" folder.pk %}">{{ folder.name|linebreaks }}</a>
+
+        
+    {% endfor %}
 {% endblock content %}
 

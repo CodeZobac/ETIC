@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>All the files inside this folder</h2>
+    <h3>Folder Name: {{folder.name}}</h3>
+    <a href={% url "mainapp:create_new_folder" %}>New folder inside this folder</a>
+
+    {% for folder in folder.folders_within.all  %}
+        <a href="{% url "mainapp:open_folder" folder.pk %}">{{ folder.name|linebreaks }}</a>
+    {% endfor %}
+
+    {% for file in folder.allfiles.all  %}
+        <a href="{{file.files.url}}">{{file|linebreaks}}</a>
+    {% endfor %}
+
+{% endblock content %}
+
+

@@ -14,7 +14,11 @@
       <button id="logout-button" type="submit">Logout</button>
     </form>
     {% endif %}
-    
+    {% if messages %}
+      {% for message in messages  %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    {% endif %}
     {% block content %}{% endblock content %}
   </body>
 </html>
