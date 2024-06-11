@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
     <h2>All the files inside this folder</h2>
     <h3>Folder Name: {{folder.name}}</h3>
-    <a href={% url "mainapp:create_new_folder" %}>New folder inside this folder</a>
+    <a href={% url "mainapp:create_new_folder" %}><button>New folder inside this folder</button></a>
 
     {% for folder in folder.folders_within.all  %}
         <a href="{% url "mainapp:open_folder" folder.pk %}">{{ folder.name|linebreaks }}</a>
