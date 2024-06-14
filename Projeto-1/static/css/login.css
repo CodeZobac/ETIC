@@ -16,7 +16,7 @@ form{
   
   width: fit-content;
   height: fit-content;
-  margin: 10vh auto;
+  margin: 5vh auto;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -46,6 +46,11 @@ input{
 
 /* Id's */
 
+img{
+  position: relative;
+  margin-left: 1.5vw;
+}
+
 #login-button{
   width: 100%;
   padding: 10px;
@@ -58,7 +63,7 @@ input{
 
 #login-button:hover{
   cursor: pointer;
-  background-color: #333;
+  background-color: #64a6f1;
   color: white;
 }
 
@@ -69,5 +74,47 @@ input{
   border-radius: 5px;
   border: 1px solid #ccc;
   color: black;
+  text-decoration: none;
 
 }
+
+#background-register-right{
+  position:fixed;
+  scroll-behavior: unset;
+  margin-left: 74vw;
+  margin-top: -5.5vh;
+  border-radius: 10px;
+}
+
+#background-register-left{
+  position:fixed;
+  scroll-behavior: unset;
+  margin-left: -3.2vw;
+  margin-top: -5.5vh;
+  border-radius: 10px;
+  
+}
+
+#reset-button{
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: black;
+  font-size: clamp(0.5rem, 1vw, 1rem);
+}
+
+#reset-button:hover{
+  cursor: pointer;
+  background-color: #64a6f1;
+  color: white;
+}
+
+#reset-bg{
+  margin-left: 17vw;
+  margin-top: -4vh;
+  border-radius: 10px;
+}
+
+

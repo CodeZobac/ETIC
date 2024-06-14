@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DRIVEthrough</title>
+    <title>CloudSync</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'media/logo-transformed.webp' %}">
   </head>
   <body>
     {% block content %}{% endblock content %}
     
     {% if request.user.is_authenticated %}
-    <a href="{% url 'accounts:profile' %}">Logged in as: {{request.user}}</a>
+    <a id="change-profile" href="{% url 'accounts:profile' %}">Your Profile - {{request.user}}</a>
+    <img id="icon-user" src="{% static 'media/icon-user.webp' %}" alt="User" width="75" height="75" />
     
     <form method="post" action="{% url 'logout' %}"> 
       {% csrf_token %} 

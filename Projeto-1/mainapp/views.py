@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import NewFolderForm
 from .models import Folder
 from django.contrib import messages
+from django.db import IntegrityError
 
 # Create your views here.
 
@@ -30,7 +31,10 @@ def create_new_folder(request):
             if redirected_from[3] != "":  # Creating folder in a folder
                 pk = redirected_from[-1]
                 form.folder = get_object_or_404(Folder, pk=pk)
-            form.save()
+            try:
+                form.save()
+            except IntegrityError:
+                messages.error(request, "Folder with this name already exists!")
             return HttpResponseRedirect(request.session["redirected_from"])
     else:
         request.session["redirected_from"] = request.META.get("HTTP_REFERER")

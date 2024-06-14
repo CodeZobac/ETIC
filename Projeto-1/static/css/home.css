@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: whitesmoke;
+    background-color: #FFFFFF;
 }
 
 body{
@@ -32,20 +32,11 @@ button:hover{
     
   }
 
-#folder-btn{
-    width: 8%;
-    padding: 10px;
-    margin: 5px 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    color: black;
-    font-size: clamp(0.5rem, 1.2vw, 1.5rem);
-  }
-
+  
   
 img{
-   display: flex;
-    margin: 0 auto;}
+    margin: 0 auto;
+}
 
 h2{
     text-align: center;
@@ -53,6 +44,7 @@ h2{
 }
 
 p{
+    margin-bottom: 10vw;
     margin: 4px auto;
     align-items:flex-start; 
 }
@@ -60,4 +52,33 @@ p{
 a{
     
     color: black;
+}
+
+/* ID's */
+
+#change-profile{
+    position: absolute;
+    margin-left: 86vw;
+    margin-top: 5vh;
+    
+    
+}
+
+#icon-user{
+    position: absolute;
+    margin-left: 95vw;
+    margin-top: 2vh;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+#folder-btn{
+    width: 7%;
+    padding: 4px;
+    margin: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+    font-size: clamp(0.5rem, 1.2vw, 1.5rem);
 }

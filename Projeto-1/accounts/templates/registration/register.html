@@ -1,10 +1,14 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<img id="background-register-right" src="{% static 'media/background-register.webp' %}" alt="background" width="554" height="1000" />
+<img id="background-register-left" src="{% static 'media/background-register.webp' %}" alt="background" width="554" height="1000" />
 <form method="post">
+    <h2>CloudSync Register</h2>
     {% csrf_token %}
     {{ user_form.as_p }}
-    <input type="submit" value="Register">
+    <button id="login-button" type="submit"> Register </button>
 </form>
 {% endblock content %}
 
