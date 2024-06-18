@@ -46,14 +46,14 @@ AUTHENTICATION_BACKENDS = [
 # Application definition
 
 INSTALLED_APPS = [
-    "accounts.apps.AccountsConfig",
+    "accounts",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "mainapp.apps.MainappConfig",
+    "mainapp",
     "easy_thumbnails",
 ]
 

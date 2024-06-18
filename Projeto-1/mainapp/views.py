@@ -1,9 +1,10 @@
-from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
+from django.shortcuts import render, HttpResponseRedirect, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import NewFolderForm
-from .models import Folder
+from .models import Folder, File
 from django.contrib import messages
 from django.db import IntegrityError
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
@@ -49,3 +50,12 @@ def open_folder(request, pk):
         messages.error(request, "Folder not found!")
         return HttpResponseRedirect("/")
     return render(request, "openFolder.html", {"folder": folder})
+
+
+def upload_file(request):
+    
+    uploaded_file = request.FILES.get("uploadfile")
+    folder_id = request.POST.get("fid")
+    folder = get_object_or_404(Folder, pk=folder_id)
+    File.objects.create(folder=folder, files=uploaded_file)
+    return redirect("mainapp:open_folder", pk=folder_id)

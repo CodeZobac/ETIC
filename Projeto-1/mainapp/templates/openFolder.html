@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+{% include "upload_file.html" %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
     <h2>All the files inside this folder</h2>
     <h3>Folder Name: {{folder.name}}</h3>
@@ -11,7 +12,7 @@
     {% endfor %}
 
     {% for file in folder.allfiles.all  %}
-        <a href="{{file.files.url}}">{{file|linebreaks}}</a>
+        <a href="{{file.files.url}}">{{file.filename|linebreaks}}</a>
     {% endfor %}
     
 {% endblock content %}
