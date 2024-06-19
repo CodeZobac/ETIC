@@ -5,8 +5,9 @@ from .models import Folder, File
 from django.contrib import messages
 from django.db import IntegrityError
 from django.core.files.storage import FileSystemStorage
-
-# Create your views here.
+from django.http import JsonResponse
+from http import HTTPStatus
+import json
 
 
 @login_required
@@ -43,6 +44,7 @@ def create_new_folder(request):
     return render(request, "create_new_folder.html", {"createfolder": createfolder})
 
 
+
 def open_folder(request, pk):
     try:
         folder = get_object_or_404(Folder, pk=pk)
@@ -59,3 +61,60 @@ def upload_file(request):
     folder = get_object_or_404(Folder, pk=folder_id)
     File.objects.create(folder=folder, files=uploaded_file)
     return redirect("mainapp:open_folder", pk=folder_id)
+
+
+def delete_file(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            pk = data.get('pk')
+            user = data.get('user')
+
+            if request.user.username != user:
+                raise Exception("Unauthorized user")
+
+            delfile = get_object_or_404(File, pk=pk)
+            delfile.delete()
+            return JsonResponse({
+                delfile.filename: "Deleted",
+                "status": HTTPStatus.OK
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e),
+                "status": HTTPStatus.NOT_FOUND
+            })
+
+    return JsonResponse({
+        "error": "Invalid request method",
+        "status": HTTPStatus.METHOD_NOT_ALLOWED
+    })
+
+def download(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            pk = data.get('pk')
+            user = data.get('user')
+
+            if request.user.username != user:
+                raise Exception("Unauthorized user")
+
+            delfile = get_object_or_404(File, pk=pk)
+            file = delfile.files
+            fs = FileSystemStorage()
+            filename = fs.save(file.name, file)
+            return JsonResponse({
+                "filename": filename,
+                "status": HTTPStatus.OK
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e),
+                "status": HTTPStatus.NOT_FOUND
+            })
+
+    return JsonResponse({
+        "error": "Invalid request method",
+        "status": HTTPStatus.METHOD_NOT_ALLOWED
+    })
