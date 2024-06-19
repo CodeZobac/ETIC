@@ -1,6 +1,12 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
+    <link rel="stylesheet" href="{% static "css/create-folder.css" %}">
+    {% if messages %}
+    {% for message in messages  %}
+        {{message}} <br>
+    {% endfor %}
+    {% endif %}
     <h2>Create New Folder</h2>
     <form method="post">
         {% csrf_token %}
