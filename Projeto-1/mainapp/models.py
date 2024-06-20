@@ -1,12 +1,27 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models import Q
+import shutil
 
 
 # Create your models here.
 def get_file_location(instance, filename):
-    return f"files/{instance.folder.user.username}/{instance.folder.name}/{filename}"
+    current_location = instance.folder
+    path = ""
+    while current_location:
+        path = f"/{current_location.name}" + path
+        current_location = current_location.folder
+    
+    return f"files/{instance.folder.user.username}{path}/{filename}"
 
+
+def get_folder_location(current_folder):
+    username = current_folder.user.username
+    path = ""
+    while current_folder:
+        path = f"/{current_folder.name}" + path
+        current_folder = current_folder.folder
+    return f"media/files/{username}{path}"
 
 class Folder(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="folders")
@@ -26,6 +41,10 @@ class Folder(models.Model):
             models.UniqueConstraint(fields=["user", "name"], condition=Q(folder=None), name="unique_user_folder"),
         ]
 
+    def delete(self, *args, **kwargs):
+        shutil.rmtree(get_folder_location(self))
+        super().delete(*args, **kwargs)
+        
 
 class File(models.Model):
     folder = models.ForeignKey(
@@ -40,4 +59,9 @@ class File(models.Model):
     def save(self, *args, **kwargs):
         self.filename = self.files.name
         super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        self.files.storage.delete(self.files.name)
+        super().delete(*args, **kwargs)
+
 

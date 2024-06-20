@@ -90,31 +90,13 @@ def delete_file(request):
         "status": HTTPStatus.METHOD_NOT_ALLOWED
     })
 
-def download(request):
-    if request.method == 'POST':
-        try:
-            data = json.loads(request.body)
-            pk = data.get('pk')
-            user = data.get('user')
+def delete_folder(request, pk):
+    folder = get_object_or_404(Folder, pk=pk)
+    try: fid = folder.folder.pk
+    except: return redirect("mainapp:home")
+    else: return redirect("mainapp:open_folder", pk=fid)
+    finally: folder.delete()
+    
+    
 
-            if request.user.username != user:
-                raise Exception("Unauthorized user")
 
-            delfile = get_object_or_404(File, pk=pk)
-            file = delfile.files
-            fs = FileSystemStorage()
-            filename = fs.save(file.name, file)
-            return JsonResponse({
-                "filename": filename,
-                "status": HTTPStatus.OK
-            })
-        except Exception as e:
-            return JsonResponse({
-                "error": str(e),
-                "status": HTTPStatus.NOT_FOUND
-            })
-
-    return JsonResponse({
-        "error": "Invalid request method",
-        "status": HTTPStatus.METHOD_NOT_ALLOWED
-    })

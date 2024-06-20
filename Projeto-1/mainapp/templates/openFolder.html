@@ -6,11 +6,19 @@
     <h2>All the files inside {{folder.name}} folder</h2>
     <h3>Folder Name: {{folder.name}}</h3>
     <a href={% url "mainapp:create_new_folder" %}><button>New folder</button></a>
+    
+    {% comment %} Delete folder {% endcomment %}
+    <form action="{% url "mainapp:delete_folder" folder.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+    {% comment %} Folder {% endcomment %}
 
     {% for folder in folder.folders_within.all  %}
         <a href="{% url "mainapp:open_folder" folder.pk %}"><button>{{ folder.name|linebreaks }} </button></a>
     {% endfor %}
 
+    {% comment %} Files {% endcomment %}
     {% for file in folder.allfiles.all  %}
         <div>
             <a href="{{file.files.url}}">{{file.filename}} </a>- <button onclick="delfile(this.id)" class="button" id="{{file.pk}}">Delete</button>  <br>
