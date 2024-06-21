@@ -6,7 +6,7 @@
         border-radius: 25px;
         overflow: hidden;
         height: 30px;
-        margin: 20px 0;
+        margin: 30px 0;
     }
 
     .storage-bar {
@@ -19,7 +19,7 @@
         border-radius: 25px;
     }
 </style>
-<body>
+<h3>Storage Usage</h3>
 <div class="storage-bar-container">
     <div class="storage-bar" id="storageBar">0%</div>
 </div>
@@ -28,7 +28,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         fetch('/api/storage-usage/', {
             headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('token') // Adjust this if you use another method for auth
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             }
         })
         .then(response => response.json())

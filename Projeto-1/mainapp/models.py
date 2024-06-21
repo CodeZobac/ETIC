@@ -15,6 +15,7 @@ def get_file_location(instance, filename):
     return f"files/{instance.folder.user.username}{path}/{filename}"
 
 
+
 def get_folder_location(current_folder):
     username = current_folder.user.username
     path = ""
