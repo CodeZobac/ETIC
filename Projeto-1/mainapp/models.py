@@ -11,7 +11,7 @@ def get_file_location(instance, filename):
     while current_location:
         path = f"/{current_location.name}" + path
         current_location = current_location.folder
-    
+
     return f"files/{instance.folder.user.username}{path}/{filename}"
 
 
@@ -22,6 +22,7 @@ def get_folder_location(current_folder):
         path = f"/{current_folder.name}" + path
         current_folder = current_folder.folder
     return f"media/files/{username}{path}"
+
 
 class Folder(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="folders")
@@ -38,13 +39,17 @@ class Folder(models.Model):
             models.UniqueConstraint(
                 fields=["folder", "name"], name="unique_folder_name"
             ),
-            models.UniqueConstraint(fields=["user", "name"], condition=Q(folder=None), name="unique_user_folder"),
+            models.UniqueConstraint(
+                fields=["user", "name"],
+                condition=Q(folder=None),
+                name="unique_user_folder",
+            ),
         ]
 
     def delete(self, *args, **kwargs):
         shutil.rmtree(get_folder_location(self))
         super().delete(*args, **kwargs)
-        
+
 
 class File(models.Model):
     folder = models.ForeignKey(
@@ -55,13 +60,15 @@ class File(models.Model):
 
     def __str__(self):
         return f"{self.files}"
-    
+
     def save(self, *args, **kwargs):
         self.filename = self.files.name
+        self.folder.user.profile.used_storage += self.files.size
+        self.folder.user.profile.save()
         super().save(*args, **kwargs)
 
-    def delete(self, *args, **kwargs):
-        self.files.storage.delete(self.files.name)
-        super().delete(*args, **kwargs)
-
-
+    # def delete(self, *args, **kwargs):
+    #     self.folder.user.profile.used_storage -= self.files.size
+    #     self.folder.user.profile.save()
+    #     super().delete(*args, **kwargs)
+    #     self.files.delete() 

@@ -2,35 +2,47 @@
 {% block content %}
 {% load static %}
 {% include "upload_file.html" %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-    <h2>All the files inside {{folder.name}} folder</h2>
+{% include "storage_bar.html" %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/open-folder.css' %}">
+    <h2>CloudSync</h2>
+    <img id="open-folder-image" src="{% static "media/hero.webp" %}">
     <h3>Folder Name: {{folder.name}}</h3>
-    <a href={% url "mainapp:create_new_folder" %}><button>New folder</button></a>
-    
+    <div id="new-folder">
+        <a href={% url "mainapp:create_new_folder" %}><button>New folder</button></a>
+    </div>
     {% comment %} Delete folder {% endcomment %}
+
     <form action="{% url "mainapp:delete_folder" folder.pk %}" method="post">
         {% csrf_token %}
-        <button type="submit">Delete</button>
+        <button type="submit">Delete Folder</button>
     </form>
     {% comment %} Folder {% endcomment %}
 
+    <h3>Folders and files inside {{folder.name}} folder</h4>
     {% for folder in folder.folders_within.all  %}
-        <a href="{% url "mainapp:open_folder" folder.pk %}"><button>{{ folder.name|linebreaks }} </button></a>
-    {% endfor %}
-
-    {% comment %} Files {% endcomment %}
-    {% for file in folder.allfiles.all  %}
-        <div>
-            <a href="{{file.files.url}}">{{file.filename}} </a>- <button onclick="delfile(this.id)" class="button" id="{{file.pk}}">Delete</button>  <br>
+        <div id="folder-within">
+           <br> <a href="{% url "mainapp:open_folder" folder.pk %}"><button id="folder-btn">{{ folder.name|linebreaks }} </button></a>
         </div>
     {% endfor %}
+
+    {% comment %} Files/Delete File {% endcomment %}
+
+    {% for file in folder.allfiles.all  %}
+        <div id="file">
+            <a href="{{file.files.url}}">{{file.filename}} </a> - <button onclick="delfile(this.id)" class="button" id="{{file.pk}}">Delete</button> - <a href="{% url "mainapp:download" file.pk %}">Download</a>  <br>
+        </div>
+    {% endfor %}
+
+    <div id="back">
+        <a href="{% url "mainapp:home" %}"><button>Back</button></a>
+    </div>
     
 {% endblock content %}
 
 {% block script %}
 
     <script>
-
+        
         const delfile = (del_file_id) => {
             const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
             fetch("{% url 'mainapp:delete_file' %}", {
@@ -49,6 +61,7 @@
                 console.log(data);
                 if (data.status === 200) {
                     document.getElementById(del_file_id).parentElement.remove();
+                    updateStorageBar();
                 }
             })
             .catch(error => console.error('Error:', error));

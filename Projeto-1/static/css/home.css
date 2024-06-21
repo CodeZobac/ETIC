@@ -51,9 +51,28 @@ p{
 }
 
 a{
+    pointer-events: auto;
     
     color: black;
 }
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
 
 
 /* Class */
@@ -85,29 +104,42 @@ a{
 #folder-btn{
     width: 7%;
     padding: 4px;
-    margin: 5px 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
     color: black;
     font-size: clamp(0.5rem, 1.2vw, 1.5rem);
 }
 
-
-
-h2 {
-    color: #2c3e50;
-    text-align: center;
-    font-size: 2.5em;
-    margin-top: 20px;
+#upload-file{
+    position: absolute;
+    width: 20%;
+    padding: 4px;
+    margin-left: 38vw;
+    margin-top: 40vh;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+    font-size: clamp(0.5rem, 1.2vw, 1.5rem);
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+#file-button{
+    width: 30%;
+    padding: 4px;
+    margin-left: 5vw;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+    font-size: clamp(0.5rem, 1.2vw, 1.5rem);
 }
 
-ul li {
-    margin: 10px 0;
-    text-align: center;
+#logout-button{
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 4vw;
 }
+
+
+
+
+
 

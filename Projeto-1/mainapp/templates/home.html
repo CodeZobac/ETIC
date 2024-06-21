@@ -3,12 +3,11 @@
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
     <br>
-    <h2>Home</h2>
+    <h2>CloudSync</h2>
     <img src="{% static 'media/hero.webp' %}" alt="Home" width="400" height="400" />   
     <br>
     <p>Welcome to the home page.</p>
-    <p>Here you can create a new folder or upload a file.</p>
-    <p>Click on the links below to navigate to the respective pages.</p>
+    <p>Click on the buttons below to navigate to the respective repositorys.</p>
     <ul>
         <li><a href="{% url 'mainapp:create_new_folder' %}"><button>Create New Folder </button> </a></li>
     </ul>
