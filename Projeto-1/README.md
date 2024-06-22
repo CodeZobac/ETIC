@@ -55,13 +55,13 @@ To set up the project, follow these steps:
    ```bash
    git clone <repository-url>
    cd <repository-directory>
-```
+    ```
 
 2. **Install using Makefile**
 
-```bash
+    ```bash
     make run
-```
+    ```
 ### Overview
 With this command all the prerequesites for the project will be set up
 To stop the aplication use ctrl+c in the terminal
