@@ -36,12 +36,53 @@
     <div id="back">
         <a href="{% url "mainapp:home" %}"><button>Back</button></a>
     </div>
-    
+
+    <div id="context-menu" class="context-menu">
+        <ul>
+            <a href={% url "mainapp:create_new_folder" %}><li onclick="createFolder()">Create Folder</li></a>
+        </ul>
+    </div>
+
 {% endblock content %}
 
 {% block script %}
 
     <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const contextMenu = document.getElementById('context-menu');
+            let currentFolderId = {{ folder.pk }};
+    
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                contextMenu.style.top = `${e.clientY}px`;
+                contextMenu.style.left = `${e.clientX}px`;
+                contextMenu.style.display = 'block';
+            });
+    
+            document.addEventListener('click', function() {
+                contextMenu.style.display = 'none';
+            });
+    
+            window.createFolder = function() {
+                const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                fetch("{% url 'mainapp:create_new_folder' %}", {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrftoken,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ parent_id: currentFolderId })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        window.location.reload();
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            };
+        });
         
         const delfile = (del_file_id) => {
             const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;

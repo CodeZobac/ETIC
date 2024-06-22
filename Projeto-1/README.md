@@ -63,7 +63,7 @@ To set up the project, follow these steps:
     make run
     ```
 ### Overview
-With this command all the prerequesites for the project will be set up
+With this command all the prerequesites for the project will be set up.
 To stop the aplication use ctrl+c in the terminal
 
 ### Conclusion

@@ -10,12 +10,15 @@ from http import HTTPStatus
 from django.http import FileResponse
 import json
 import os
+from .decorators import admin_forbiden
 
+@admin_forbiden
 @login_required
 def home(request):
     folders = request.user.folders.filter(folder=None)
     return render(request, "home.html", {"folders": folders})
 
+@admin_forbiden
 @login_required
 def create_new_folder(request):
     if request.method == "POST":
@@ -46,6 +49,7 @@ def create_new_folder(request):
         createfolder = NewFolderForm()
     return render(request, "create_new_folder.html", {"createfolder": createfolder})
 
+@admin_forbiden
 @login_required
 def open_folder(request, pk):
     try:
@@ -55,6 +59,7 @@ def open_folder(request, pk):
         return HttpResponseRedirect("/")
     return render(request, "openFolder.html", {"folder": folder})
 
+@admin_forbiden
 @login_required
 def upload_file(request):
 
@@ -67,6 +72,8 @@ def upload_file(request):
         messages.error(request, "Please chose a file")
     return redirect("mainapp:open_folder", pk=folder_id)
 
+
+@admin_forbiden
 @login_required
 def delete_file(request):
     if request.method == "POST":
@@ -85,6 +92,8 @@ def delete_file(request):
     return JsonResponse(
         {"error": "Invalid request method", "status": HTTPStatus.METHOD_NOT_ALLOWED})
 
+
+@admin_forbiden
 @login_required
 def delete_folder(request, pk):
     folder = get_object_or_404(Folder, pk=pk)
@@ -98,6 +107,7 @@ def delete_folder(request, pk):
         folder.delete()
 
 
+@admin_forbiden
 @login_required
 def download(request, pk):
     file_instance = get_object_or_404(File, pk=pk)
