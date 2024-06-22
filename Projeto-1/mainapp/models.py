@@ -63,13 +63,14 @@ class File(models.Model):
         return f"{self.files}"
 
     def save(self, *args, **kwargs):
-        self.filename = self.files.name
-        self.folder.user.profile.used_storage += self.files.size
-        self.folder.user.profile.save()
+        if not self.pk:  
+            self.filename = self.files.name
+            self.folder.user.profile.used_storage += self.files.size
+            self.folder.user.profile.save()
         super().save(*args, **kwargs)
 
-    # def delete(self, *args, **kwargs):
-    #     self.folder.user.profile.used_storage -= self.files.size
-    #     self.folder.user.profile.save()
-    #     super().delete(*args, **kwargs)
-    #     self.files.delete() 
+    def delete(self, *args, **kwargs):
+        file_size = self.files.size
+        super().delete(*args, **kwargs)  
+        self.folder.user.profile.used_storage -= file_size
+        self.folder.user.profile.save()
