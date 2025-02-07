@@ -20,7 +20,7 @@ class List<T> implements ListHandler<T>{
 	}
 }
 
-const list = new List<number>();
+const list = new List();
 list.add(1);
 list.add(2);
 list.add(3);
