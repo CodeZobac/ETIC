@@ -1,7 +1,5 @@
 # Aplicação **CBT** (Crypto Bot Trader)
 
-#
-
 ## Frontend (React + TypeScript)
 - **Dashboard Components**
   - Trade Monitor: Real-time trade visualization
@@ -16,8 +14,6 @@
   - React Query for API calls
   - Web3.js for Solana interactions
   - Chart.js for data visualization
-
-# 
 
 ## Backend (Python)
 ### Data Pipeline
@@ -41,8 +37,6 @@
 - PostgreSQL
 - Docker
 - Python (FinRL, BERT-Tiny)
-
-#
 
 ## Data Flow
 1. Frontend ←→ FastAPI Backend
