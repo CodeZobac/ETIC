@@ -1,12 +1,21 @@
 import './App.css'
 import { Component, Func, Button } from './Component'
+import { Provider } from 'react-redux'
+import { store } from './store'
+import { Counter } from './Counter'
+import { IncrementButton } from './Counter'
 
 function App() {
 	return (
 		<>
-			<Component />
-			<p>{Func()}</p>
-			<Button />
+			<Provider store={store}>
+				<h1>App</h1>
+				<Component />
+				<p>{Func()}</p>
+				<Button />
+				<Counter /> 
+				<IncrementButton />
+			</Provider>
 		</>
 	)
 }
