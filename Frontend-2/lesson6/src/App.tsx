@@ -1,7 +1,7 @@
 import './App.css'
 import { Component, Func, Button } from './Component'
 import { Provider } from 'react-redux'
-import { store } from './store'
+import { store } from './redux/store'
 import { Counter } from './Counter'
 import { IncrementButton } from './Counter'
 
